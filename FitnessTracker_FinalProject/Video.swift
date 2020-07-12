@@ -15,5 +15,6 @@ struct Vidoe {
     var title = ""
     var description = ""
     var thumbnail = ""
-    var published  = "" 
+    var published  = ""
+    
 }
