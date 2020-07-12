@@ -18,6 +18,7 @@ class Utilities {
         textfield.borderStyle = .none
         textfield.layer.addSublayer(bottomLine)
         
+        
     }
     
     static func styleFilledButton(_ button:UIButton) {
