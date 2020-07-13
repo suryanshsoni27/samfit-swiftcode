@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		9D3D19E024BBB3710096566F /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3D19DF24BBB3710096566F /* Video.swift */; };
 		9D3D19E224BBB3BF0096566F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3D19E124BBB3BF0096566F /* Model.swift */; };
-		9D54497124BADA82008A2D2B /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D54497024BADA82008A2D2B /* WebKit.framework */; };
+		9D3D19E524BBD3D10096566F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7EC4BB24B6AC92001EAF22 /* AppDelegate.swift */; };
+		9D3D19E724BBD96A0096566F /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3D19E624BBD96A0096566F /* Response.swift */; };
 		9D54497524BAEB40008A2D2B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D54497424BAEB40008A2D2B /* Constants.swift */; };
-		9D7EC4BC24B6AC92001EAF22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7EC4BB24B6AC92001EAF22 /* AppDelegate.swift */; };
 		9D7EC4BE24B6AC92001EAF22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7EC4BD24B6AC92001EAF22 /* SceneDelegate.swift */; };
 		9D7EC4C024B6AC92001EAF22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7EC4BF24B6AC92001EAF22 /* ViewController.swift */; };
 		9D7EC4C324B6AC92001EAF22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D7EC4C124B6AC92001EAF22 /* Main.storyboard */; };
@@ -28,6 +28,7 @@
 /* Begin PBXFileReference section */
 		9D3D19DF24BBB3710096566F /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		9D3D19E124BBB3BF0096566F /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		9D3D19E624BBD96A0096566F /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		9D54497024BADA82008A2D2B /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		9D54497424BAEB40008A2D2B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9D7EC4B824B6AC92001EAF22 /* FitnessTracker_FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessTracker_FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,7 +52,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D54497124BADA82008A2D2B /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +89,12 @@
 				9D7EC4D424B6CEC9001EAF22 /* Helpers */,
 				9D7EC4CF24B6B703001EAF22 /* View Controllers */,
 				9D7EC4BB24B6AC92001EAF22 /* AppDelegate.swift */,
+				9D7EC4D024B6B72D001EAF22 /* FirstPageUserIncomingViewController.swift */,
+				9D7EC4D724B6D0A6001EAF22 /* ThreeButtonsForSelectViewController.swift */,
+				9D7EC4D924B6D16C001EAF22 /* CalorrieTrackerViewController.swift */,
+				9D7EC4DB24B6D17C001EAF22 /* FitKitchenViewController.swift */,
+				9D7EC4DD24B6D18C001EAF22 /* TrainingViewController.swift */,
+				9D7EC4BF24B6AC92001EAF22 /* ViewController.swift */,
 				9D7EC4BD24B6AC92001EAF22 /* SceneDelegate.swift */,
 				9D7EC4C124B6AC92001EAF22 /* Main.storyboard */,
 				9D7EC4C424B6AC93001EAF22 /* Assets.xcassets */,
@@ -97,6 +103,7 @@
 				9D54497424BAEB40008A2D2B /* Constants.swift */,
 				9D3D19DF24BBB3710096566F /* Video.swift */,
 				9D3D19E124BBB3BF0096566F /* Model.swift */,
+				9D3D19E624BBD96A0096566F /* Response.swift */,
 			);
 			path = FitnessTracker_FinalProject;
 			sourceTree = "<group>";
@@ -104,12 +111,6 @@
 		9D7EC4CF24B6B703001EAF22 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				9D7EC4BF24B6AC92001EAF22 /* ViewController.swift */,
-				9D7EC4D024B6B72D001EAF22 /* FirstPageUserIncomingViewController.swift */,
-				9D7EC4D724B6D0A6001EAF22 /* ThreeButtonsForSelectViewController.swift */,
-				9D7EC4D924B6D16C001EAF22 /* CalorrieTrackerViewController.swift */,
-				9D7EC4DB24B6D17C001EAF22 /* FitKitchenViewController.swift */,
-				9D7EC4DD24B6D18C001EAF22 /* TrainingViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -193,14 +194,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D3D19E524BBD3D10096566F /* AppDelegate.swift in Sources */,
 				9D7EC4DE24B6D18C001EAF22 /* TrainingViewController.swift in Sources */,
 				9D7EC4C024B6AC92001EAF22 /* ViewController.swift in Sources */,
 				9D7EC4DC24B6D17C001EAF22 /* FitKitchenViewController.swift in Sources */,
 				9D3D19E224BBB3BF0096566F /* Model.swift in Sources */,
 				9D7EC4D824B6D0A6001EAF22 /* ThreeButtonsForSelectViewController.swift in Sources */,
+				9D3D19E724BBD96A0096566F /* Response.swift in Sources */,
 				9D7EC4DA24B6D16C001EAF22 /* CalorrieTrackerViewController.swift in Sources */,
 				9D54497524BAEB40008A2D2B /* Constants.swift in Sources */,
-				9D7EC4BC24B6AC92001EAF22 /* AppDelegate.swift in Sources */,
 				9D7EC4BE24B6AC92001EAF22 /* SceneDelegate.swift in Sources */,
 				9D7EC4D624B6CEE4001EAF22 /* Utilities.swift in Sources */,
 				9D3D19E024BBB3710096566F /* Video.swift in Sources */,

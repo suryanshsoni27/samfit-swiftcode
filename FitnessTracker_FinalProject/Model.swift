@@ -8,36 +8,45 @@
 
 import Foundation
 
+protocol ModelDelegate {
+    func videosFetched(_ videos:[Video])
+}
+
 
 class Model {
-    
+    var delegate:ModelDelegate?
     func getVideos() {
-        //Create URL object
-        
         let url = URL(string: Constants.API_URL)
-        guard url != nil else {
+        guard url != nil else{
             return
         }
-        //URLSesssion object
-        
+    
         let session = URLSession.shared
-        //Get a Data tsk
-        let dataTask  = session.dataTask(with: url!) { (data,response,error) in
-            //
+        let dataTask = session.dataTask(with: url!) { (data, response, error) in
+            
+      
             if error != nil || data == nil {
                 return
             }
-            //parsing teh data
             
-        }
+            do {
+                
+              
+                let decoder = JSONDecoder()
+                decoder.dateDecodingStrategy = .iso8601
+                
+                let response = try decoder.decode(Response.self, from: data!)
+                if response.items != nil {
+                    
+                    DispatchQueue.main.async {
+                        
+                     
+                        self.delegate?.videosFetched(response.items!)
+                    }}}
+            catch {
+                
+            }}
         
-        
-        
-        
-        
-        
-        //Fire the task
         dataTask.resume()
         
-    }
-}
+    }}
