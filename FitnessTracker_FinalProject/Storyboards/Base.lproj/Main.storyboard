@@ -632,7 +632,6 @@
         <!--View Controller-->
         <scene sceneID="adx-GX-W3h">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JAs-hx-0hv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="LNz-q1-r3v" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0AA-oN-vug">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
@@ -862,7 +861,7 @@
                                                                     <fragment content="WORKOUT TIPS">
                                                                         <attributes>
                                                                             <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                            <font key="NSFont" size="30" name=".SFNS-Regular"/>
+                                                                            <font key="NSFont" metaFont="system" size="30"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
                                                                     </fragment>
@@ -885,7 +884,7 @@
                                                                 </constraints>
                                                                 <attributedString key="attributedText">
                                                                     <fragment>
-                                                                        <mutableString key="content">1) Limit your workouts to 30-40 minutes. Though the tendency of some people who really want to get a lot out of their workouts is to spend a lot of time at the gym, the truth is that after 30 or 40 minutes, the benefit isn’t as great. To go that long, you’d have to lower the intensity of the workout, and that means that you’re spending too much time working out. It’s better to work out at a higher intensity for a shorter amount of time.
+                                                                        <string key="content">1) Limit your workouts to 30-40 minutes. Though the tendency of some people who really want to get a lot out of their workouts is to spend a lot of time at the gym, the truth is that after 30 or 40 minutes, the benefit isn’t as great. To go that long, you’d have to lower the intensity of the workout, and that means that you’re spending too much time working out. It’s better to work out at a higher intensity for a shorter amount of time.
 High-intensity workouts.                2) If you’re just starting out with exercise, it’s best to take it slow. If you’re running or cycling, for example, build up your endurance for at least a month before you get into anything more intense. That means going at a rate where you can easily talk without being out of breath. However, once you have that base of endurance, step up the intensity to step up the effectiveness of the workout.
 Protein. Many people don’t pay enough attention to getting the protein their muscles need to rebuild.         3) If you don’t, you are going to get very little out of your workout, as both cardio and strength workouts require protein for building muscles. I recommend either whey or soy protein shakes.
 Water. Be sure to hydrate throughout the day. It takes a couple of hours for your body to absorb the water, so you can’t just drink right before exercise. Make it a habit to drink water regularly throughout the day.
@@ -900,7 +899,7 @@ Balance lifting. Instead of having exercises where you’re sitting down or hold
 Mix it up. Don’t stick to the same workout routine for too long, or your body will adjust to the stress level and you won’t be getting an effective workout.                                  10) For strength training, change your routine every few weeks. For cardio, it’s best to cross train rather than, say, to run every time.
 Good form. For strength training especially, and swimming, form is very important, but it’s also important for other types of exercise. If you’re strength training, start with lighter weights so you can work on your form. It’s good to have an experienced spotter or trainer who knows good form to help you for the first month or so. Never sacrifice form for heavier weight. For swimming, you’ll need to get a coach to teach you form.
 Hills.                                             11) If you run or bike or walk for cardio, you’ll want to incorporate hills (after the first month or two of doing it at an easy pace on flat ground). These will make you stronger and make your limited workout time even more effective. Take them easy at first, but once you’re used to hills, you can get a good pace going. Either use a hilly route or do repeats on one hill.
-Circuits.                                   12) One mistake that people make is to do multiple sets of the same exercise without rest between the sets. This doesn’t allow your muscles to recover and it’s a waste of your workout. But instead of doing a set, resting, and then doing your second set, it’s more effective to move on to multiple exercises in a circuit, so that you don’t rest between exercises but do rest each muscle group. This will give you a good cardio workout while you do your strength training.</mutableString>
+Circuits.                                   12) One mistake that people make is to do multiple sets of the same exercise without rest between the sets. This doesn’t allow your muscles to recover and it’s a waste of your workout. But instead of doing a set, resting, and then doing your second set, it’s more effective to move on to multiple exercises in a circuit, so that you don’t rest between exercises but do rest each muscle group. This will give you a good cardio workout while you do your strength training.</string>
                                                                         <attributes>
                                                                             <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <font key="NSFont" size="17" name="Helvetica"/>
@@ -948,6 +947,7 @@ Circuits.                                   12) One mistake that people make is 
                     </view>
                     <navigationItem key="navigationItem" id="xfV-ge-fyU"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JAs-hx-0hv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="676.81159420289862" y="1539.5089285714284"/>
         </scene>
@@ -1105,6 +1105,11 @@ Circuits.                                   12) One mistake that people make is 
                                 <state key="normal" title="Watch training videos">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="m8W-dU-crV" kind="popoverPresentation" popoverAnchorView="w51-4V-wT6" id="a52-AQ-jB3">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vp4-Js-p81">
                                 <rect key="frame" x="309" y="40" width="77" height="22"/>
@@ -1179,6 +1184,172 @@ Circuits.                                   12) One mistake that people make is 
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1398.5507246376812" y="1541.5178571428571"/>
+        </scene>
+        <!--Powerliftvideos View Controller-->
+        <scene sceneID="AL6-FX-PjL">
+            <objects>
+                <viewController id="m8W-dU-crV" customClass="powerliftvideosViewController" customModule="FitnessTracker_FinalProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ehu-Qb-h79">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aER-vY-15B">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell2" rowHeight="514" id="1bU-hH-BCF" customClass="powerliftTableViewCell" customModule="FitnessTracker_FinalProject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="514"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1bU-hH-BCF" id="IiH-5s-pcw">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="514"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="G0T-wS-05v">
+                                                    <rect key="frame" x="10" y="22" width="394" height="481"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hrx-bA-Mi7">
+                                                            <rect key="frame" x="0.0" y="0.0" width="394" height="300"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="BuO-fS-ao1"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ega-mX-qrb">
+                                                            <rect key="frame" x="0.0" y="370" width="394" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yUg-NI-HEN">
+                                                            <rect key="frame" x="0.0" y="460.5" width="394" height="20.5"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="Hrx-bA-Mi7" secondAttribute="trailing" id="nqk-hx-yhE"/>
+                                                        <constraint firstItem="Hrx-bA-Mi7" firstAttribute="leading" secondItem="G0T-wS-05v" secondAttribute="leading" id="o1Y-eB-NQX"/>
+                                                        <constraint firstItem="Hrx-bA-Mi7" firstAttribute="top" secondItem="G0T-wS-05v" secondAttribute="top" id="oTb-PI-1rF"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstItem="G0T-wS-05v" firstAttribute="leading" secondItem="IiH-5s-pcw" secondAttribute="leading" constant="10" id="2Vi-WY-xtd"/>
+                                                <constraint firstAttribute="trailing" secondItem="G0T-wS-05v" secondAttribute="trailing" constant="10" id="QmQ-tJ-doh"/>
+                                                <constraint firstItem="G0T-wS-05v" firstAttribute="top" secondItem="IiH-5s-pcw" secondAttribute="topMargin" constant="11" id="fOt-Fz-EGP"/>
+                                                <constraint firstAttribute="bottom" secondItem="G0T-wS-05v" secondAttribute="bottom" constant="11" id="fQP-eR-fis"/>
+                                                <constraint firstAttribute="trailing" secondItem="G0T-wS-05v" secondAttribute="trailing" constant="10" id="kcE-Vs-7cP"/>
+                                                <constraint firstItem="G0T-wS-05v" firstAttribute="leading" secondItem="IiH-5s-pcw" secondAttribute="leading" constant="10" id="v6X-F7-mpI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dataLab" destination="yUg-NI-HEN" id="2pL-f0-Wxd"/>
+                                            <outlet property="imageViewThumb" destination="Hrx-bA-Mi7" id="A4y-0l-ySx"/>
+                                            <outlet property="titleLab" destination="Ega-mX-qrb" id="e0b-RB-meB"/>
+                                            <segue destination="MzW-06-Uef" kind="show" id="yhe-EH-5oV"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="aER-vY-15B" firstAttribute="trailing" secondItem="ODt-mf-eqw" secondAttribute="trailing" id="IcE-eB-oUq"/>
+                            <constraint firstItem="aER-vY-15B" firstAttribute="top" secondItem="ODt-mf-eqw" secondAttribute="top" id="bWm-tq-ZP2"/>
+                            <constraint firstItem="aER-vY-15B" firstAttribute="leading" secondItem="ODt-mf-eqw" secondAttribute="leading" id="fkd-Fd-cIJ"/>
+                            <constraint firstAttribute="bottom" secondItem="aER-vY-15B" secondAttribute="bottom" id="hnK-fM-PGw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ODt-mf-eqw"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="GzD-U1-9x4"/>
+                    <connections>
+                        <outlet property="tableView" destination="aER-vY-15B" id="lfX-wc-qtL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FXx-jG-6TZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1053.6231884057972" y="2514.5089285714284"/>
+        </scene>
+        <!--Powerlift Detail View Controller-->
+        <scene sceneID="fDs-Et-VkP">
+            <objects>
+                <viewController id="MzW-06-Uef" customClass="PowerliftDetailViewController" customModule="FitnessTracker_FinalProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cTz-Sb-bQZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="JPp-ee-q7W">
+                                <rect key="frame" x="40" y="74" width="334" height="714"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3da-Mo-OOv">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28T-g0-8ol">
+                                        <rect key="frame" x="0.0" y="23.5" width="334" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <wkWebView contentMode="scaleToFill" verticalHuggingPriority="248" verticalCompressionResistancePriority="748" translatesAutoresizingMaskIntoConstraints="NO" id="YLh-Bd-Y9f">
+                                        <rect key="frame" x="0.0" y="47" width="334" height="332"/>
+                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <wkWebViewConfiguration key="configuration">
+                                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                            <wkPreferences key="preferences"/>
+                                        </wkWebViewConfiguration>
+                                    </wkWebView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="i0k-fK-1o2">
+                                        <rect key="frame" x="0.0" y="382" width="334" height="332"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="YLh-Bd-Y9f" secondAttribute="trailing" id="Dlu-ix-ULu"/>
+                                    <constraint firstItem="YLh-Bd-Y9f" firstAttribute="top" secondItem="28T-g0-8ol" secondAttribute="bottom" constant="3" id="aLB-Yu-5wM"/>
+                                    <constraint firstItem="i0k-fK-1o2" firstAttribute="top" secondItem="YLh-Bd-Y9f" secondAttribute="bottom" constant="3" id="gD3-zP-IFg"/>
+                                    <constraint firstItem="i0k-fK-1o2" firstAttribute="height" secondItem="YLh-Bd-Y9f" secondAttribute="height" id="nHk-Kl-u4s"/>
+                                    <constraint firstItem="YLh-Bd-Y9f" firstAttribute="leading" secondItem="JPp-ee-q7W" secondAttribute="leading" id="yqZ-uV-M1S"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tg5-mV-lM4">
+                                <rect key="frame" x="194" y="25" width="26" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" backgroundImage="arrowshape.turn.up.left.2.fill" catalog="system"/>
+                                <connections>
+                                    <segue destination="m8W-dU-crV" kind="show" id="I2P-yV-8ZR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DNP-45-g3j" firstAttribute="bottom" secondItem="JPp-ee-q7W" secondAttribute="bottom" constant="20" id="Des-uv-AAZ"/>
+                            <constraint firstItem="JPp-ee-q7W" firstAttribute="top" secondItem="DNP-45-g3j" secondAttribute="top" constant="74" id="OqV-a0-st9"/>
+                            <constraint firstItem="DNP-45-g3j" firstAttribute="trailing" secondItem="JPp-ee-q7W" secondAttribute="trailing" constant="40" id="hAP-5g-qHD"/>
+                            <constraint firstItem="JPp-ee-q7W" firstAttribute="leading" secondItem="DNP-45-g3j" secondAttribute="leading" constant="40" id="svy-dd-PEK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DNP-45-g3j"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="FB6-9U-2W7"/>
+                    <connections>
+                        <outlet property="dateLab" destination="28T-g0-8ol" id="zUt-rv-4rc"/>
+                        <outlet property="textView" destination="i0k-fK-1o2" id="CxI-0E-1u7"/>
+                        <outlet property="titleLab" destination="3da-Mo-OOv" id="nh2-QN-Cwf"/>
+                        <outlet property="webView" destination="YLh-Bd-Y9f" id="46R-gv-L06"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zEb-Kc-BtX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1060.8695652173915" y="3303.3482142857142"/>
         </scene>
         <!--Training View Controller-->
         <scene sceneID="Eq3-Q5-wvw">
@@ -1447,10 +1618,10 @@ Circuits.                                   12) One mistake that people make is 
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fAM-ma-oVs">
                                 <rect key="frame" x="20" y="20" width="374" height="768"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rnR-iQ-PAC">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rnR-iQ-PAC">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gua-N2-nOD">
@@ -1461,10 +1632,10 @@ Circuits.                                   12) One mistake that people make is 
                                             <segue destination="pov-yH-SZz" kind="show" id="OOL-ZX-IeR"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJ6-0N-LDd">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJ6-0N-LDd">
                                         <rect key="frame" x="0.0" y="62.5" width="374" height="20.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dMC-Zo-P0K">
@@ -1531,6 +1702,7 @@ Circuits.                                   12) One mistake that people make is 
     <inferredMetricsTieBreakers>
         <segue reference="OOL-ZX-IeR"/>
         <segue reference="oQE-ED-c2E"/>
+        <segue reference="I2P-yV-8ZR"/>
         <segue reference="5xn-r5-5rg"/>
     </inferredMetricsTieBreakers>
     <resources>

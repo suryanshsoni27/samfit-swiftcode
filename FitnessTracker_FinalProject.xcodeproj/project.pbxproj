@@ -17,6 +17,11 @@
 		9D4B066C24BD211C006B43A7 /* PowerliftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4B066B24BD211C006B43A7 /* PowerliftViewController.swift */; };
 		9D4B066E24BD212A006B43A7 /* cardioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4B066D24BD212A006B43A7 /* cardioViewController.swift */; };
 		9D4B067024BD2146006B43A7 /* yogaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4B066F24BD2146006B43A7 /* yogaViewController.swift */; };
+		9D4B067224BD6384006B43A7 /* powerliftTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4B067124BD6384006B43A7 /* powerliftTableViewCell.swift */; };
+		9D4B067424BD63F2006B43A7 /* Constants2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4B067324BD63F2006B43A7 /* Constants2.swift */; };
+		9D4B067624BD6413006B43A7 /* Model2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4B067524BD6413006B43A7 /* Model2.swift */; };
+		9D4B067824BD644C006B43A7 /* PowerliftDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4B067724BD644C006B43A7 /* PowerliftDetailViewController.swift */; };
+		9D4B067A24BD65EE006B43A7 /* powerliftvideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4B067924BD65EE006B43A7 /* powerliftvideosViewController.swift */; };
 		9D54497524BAEB40008A2D2B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D54497424BAEB40008A2D2B /* Constants.swift */; };
 		9D7EC4BE24B6AC92001EAF22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7EC4BD24B6AC92001EAF22 /* SceneDelegate.swift */; };
 		9D7EC4C024B6AC92001EAF22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7EC4BF24B6AC92001EAF22 /* ViewController.swift */; };
@@ -41,6 +46,11 @@
 		9D4B066B24BD211C006B43A7 /* PowerliftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerliftViewController.swift; sourceTree = "<group>"; };
 		9D4B066D24BD212A006B43A7 /* cardioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardioViewController.swift; sourceTree = "<group>"; };
 		9D4B066F24BD2146006B43A7 /* yogaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yogaViewController.swift; sourceTree = "<group>"; };
+		9D4B067124BD6384006B43A7 /* powerliftTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = powerliftTableViewCell.swift; sourceTree = "<group>"; };
+		9D4B067324BD63F2006B43A7 /* Constants2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants2.swift; sourceTree = "<group>"; };
+		9D4B067524BD6413006B43A7 /* Model2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model2.swift; sourceTree = "<group>"; };
+		9D4B067724BD644C006B43A7 /* PowerliftDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerliftDetailViewController.swift; sourceTree = "<group>"; };
+		9D4B067924BD65EE006B43A7 /* powerliftvideosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = powerliftvideosViewController.swift; sourceTree = "<group>"; };
 		9D54497024BADA82008A2D2B /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		9D54497424BAEB40008A2D2B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9D7EC4B824B6AC92001EAF22 /* FitnessTracker_FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessTracker_FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +129,7 @@
 				9D7EC4D524B6CEE4001EAF22 /* Utilities.swift */,
 				9D54497424BAEB40008A2D2B /* Constants.swift */,
 				9D2D3CDC24BBF7F900CC6A29 /* CacheManager.swift */,
+				9D4B067324BD63F2006B43A7 /* Constants2.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -136,6 +147,8 @@
 				9D4B066B24BD211C006B43A7 /* PowerliftViewController.swift */,
 				9D4B066D24BD212A006B43A7 /* cardioViewController.swift */,
 				9D4B066F24BD2146006B43A7 /* yogaViewController.swift */,
+				9D4B067724BD644C006B43A7 /* PowerliftDetailViewController.swift */,
+				9D4B067924BD65EE006B43A7 /* powerliftvideosViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -144,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				9DC1885924BBEE3200B67DCD /* FitkitchenTableViewCell.swift */,
+				9D4B067124BD6384006B43A7 /* powerliftTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -154,6 +168,7 @@
 				9D3D19DF24BBB3710096566F /* Video.swift */,
 				9D3D19E124BBB3BF0096566F /* Model.swift */,
 				9D3D19E624BBD96A0096566F /* Response.swift */,
+				9D4B067524BD6413006B43A7 /* Model2.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -241,20 +256,25 @@
 				9D3D19E524BBD3D10096566F /* AppDelegate.swift in Sources */,
 				9D2D3CDD24BBF7F900CC6A29 /* CacheManager.swift in Sources */,
 				9D7EC4DE24B6D18C001EAF22 /* TrainingViewController.swift in Sources */,
+				9D4B067A24BD65EE006B43A7 /* powerliftvideosViewController.swift in Sources */,
 				9D7EC4C024B6AC92001EAF22 /* ViewController.swift in Sources */,
 				9D4B067024BD2146006B43A7 /* yogaViewController.swift in Sources */,
 				9D7EC4DC24B6D17C001EAF22 /* FitKitchenViewController.swift in Sources */,
 				9D2D3CDF24BBFB8A00CC6A29 /* FKDetailedViewController.swift in Sources */,
 				9D3D19E224BBB3BF0096566F /* Model.swift in Sources */,
+				9D4B067624BD6413006B43A7 /* Model2.swift in Sources */,
 				9D7EC4D824B6D0A6001EAF22 /* ThreeButtonsForSelectViewController.swift in Sources */,
 				9D3D19E724BBD96A0096566F /* Response.swift in Sources */,
 				9D7EC4DA24B6D16C001EAF22 /* CalorrieTrackerViewController.swift in Sources */,
 				9D4B066C24BD211C006B43A7 /* PowerliftViewController.swift in Sources */,
 				9D54497524BAEB40008A2D2B /* Constants.swift in Sources */,
 				9D4B066E24BD212A006B43A7 /* cardioViewController.swift in Sources */,
+				9D4B067824BD644C006B43A7 /* PowerliftDetailViewController.swift in Sources */,
+				9D4B067224BD6384006B43A7 /* powerliftTableViewCell.swift in Sources */,
 				9D7EC4BE24B6AC92001EAF22 /* SceneDelegate.swift in Sources */,
 				9D7EC4D624B6CEE4001EAF22 /* Utilities.swift in Sources */,
 				9D3D19E024BBB3710096566F /* Video.swift in Sources */,
+				9D4B067424BD63F2006B43A7 /* Constants2.swift in Sources */,
 				9DC1885A24BBEE3200B67DCD /* FitkitchenTableViewCell.swift in Sources */,
 				9D7EC4D124B6B72D001EAF22 /* FirstPageUserIncomingViewController.swift in Sources */,
 			);
