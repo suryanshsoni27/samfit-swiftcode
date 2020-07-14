@@ -632,6 +632,7 @@
         <!--View Controller-->
         <scene sceneID="adx-GX-W3h">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JAs-hx-0hv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="LNz-q1-r3v" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0AA-oN-vug">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
@@ -641,19 +642,284 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4cI-tg-mR2">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="3000"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sCZ-NR-zFp">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bXM-p9-w9L">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="600"/>
-                                                <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="51" translatesAutoresizingMaskIntoConstraints="NO" id="9iL-ac-ZF9">
+                                                        <rect key="frame" x="57" y="43" width="300" height="537"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDT-he-gLF">
+                                                                <rect key="frame" x="27" y="0.0" width="246.5" height="35"/>
+                                                                <attributedString key="attributedText">
+                                                                    <fragment content="50% of Your 1 RM">
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <font key="NSFont" size="30" name="AndaleMono"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                </attributedString>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FirstPageBackground" translatesAutoresizingMaskIntoConstraints="NO" id="DLL-i5-9o0">
+                                                                <rect key="frame" x="0.0" y="86" width="300" height="200"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="6hk-nm-FFd"/>
+                                                                    <constraint firstAttribute="height" constant="200" id="Zqb-EZ-V6z"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mPX-1W-oxy">
+                                                                <rect key="frame" x="0.0" y="337" width="300" height="200"/>
+                                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="200" id="J2e-fp-jIT"/>
+                                                                </constraints>
+                                                                <string key="text">The perfect combination for every sportsman is to do 3-6 sets of 3-4 reps of explosive fast reps. Use a weight that is 50% of your 1RM. This will teach your muscles to be strong, powerful and fast without becoming too big, bulky and slow – the hallmarks of sportsman</string>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                            </textView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="mPX-1W-oxy" firstAttribute="width" secondItem="DLL-i5-9o0" secondAttribute="width" id="rGV-25-NkZ"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="height" constant="600" id="99y-15-cIV"/>
+                                                    <constraint firstItem="9iL-ac-ZF9" firstAttribute="top" secondItem="bXM-p9-w9L" secondAttribute="top" constant="43" id="Pci-eg-gff"/>
+                                                    <constraint firstAttribute="trailing" secondItem="9iL-ac-ZF9" secondAttribute="trailing" constant="57" id="Yg8-1I-24m"/>
+                                                    <constraint firstAttribute="bottom" secondItem="9iL-ac-ZF9" secondAttribute="bottom" constant="20" id="ZaS-en-dfh"/>
+                                                    <constraint firstItem="9iL-ac-ZF9" firstAttribute="leading" secondItem="bXM-p9-w9L" secondAttribute="leading" constant="57" id="jlh-QI-5cS"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bbd-TY-zMT">
+                                                <rect key="frame" x="0.0" y="600" width="414" height="600"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="aA5-RV-JYN">
+                                                        <rect key="frame" x="8" y="36" width="398" height="529.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="be4-uF-iow">
+                                                                <rect key="frame" x="89.5" y="0.0" width="219.5" height="77.5"/>
+                                                                <attributedString key="attributedText">
+                                                                    <fragment content="70% of Your 1RM">
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <font key="NSFont" metaFont="system" size="30"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                </attributedString>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4rthpic" translatesAutoresizingMaskIntoConstraints="NO" id="Qy8-1l-mBs">
+                                                                <rect key="frame" x="49" y="103.5" width="300" height="200"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="200" id="Ht7-P8-j1G"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nc8-lC-NKQ">
+                                                                <rect key="frame" x="49" y="329.5" width="300" height="200"/>
+                                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="FMd-XZ-h4Y"/>
+                                                                    <constraint firstAttribute="height" constant="200" id="JOG-2Q-8Rq"/>
+                                                                </constraints>
+                                                                <string key="text">If you're an endurance athlete or just want to get leaner then use weights in no-rest circuits consisting of 4-10 exercises. Do 12-20 reps. This burns calories and hikes up your metabolism for up to 12 hours after exercise.</string>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                            </textView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="Nc8-lC-NKQ" firstAttribute="width" secondItem="Qy8-1l-mBs" secondAttribute="width" id="Zzk-v2-dgi"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="aA5-RV-JYN" secondAttribute="trailing" constant="8" id="1LS-sv-RF7"/>
+                                                    <constraint firstAttribute="height" constant="600" id="OD6-EQ-Cab"/>
+                                                    <constraint firstItem="aA5-RV-JYN" firstAttribute="top" secondItem="bbd-TY-zMT" secondAttribute="top" constant="36" id="Zyt-Uc-LH8"/>
+                                                    <constraint firstItem="aA5-RV-JYN" firstAttribute="leading" secondItem="bbd-TY-zMT" secondAttribute="leading" constant="8" id="o5Y-Vb-coR"/>
+                                                    <constraint firstAttribute="bottom" secondItem="aA5-RV-JYN" secondAttribute="bottom" constant="34.5" id="zuv-fF-LDf"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uBX-9l-obt">
+                                                <rect key="frame" x="0.0" y="1200" width="414" height="600"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="A9l-U7-Ehu">
+                                                        <rect key="frame" x="3" y="22" width="409" height="569.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18F-3C-4tl">
+                                                                <rect key="frame" x="90" y="0.0" width="229.5" height="34.5"/>
+                                                                <attributedString key="attributedText">
+                                                                    <fragment content="80% of Your 1RM">
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <font key="NSFont" metaFont="system" size="31"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                </attributedString>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thirdpic" translatesAutoresizingMaskIntoConstraints="NO" id="MkF-gM-mau">
+                                                                <rect key="frame" x="54.5" y="48.5" width="300" height="196"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="196" id="2nW-5Y-tCf"/>
+                                                                    <constraint firstAttribute="width" constant="300" id="ZD9-N6-0Nl"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FvC-bf-v3i">
+                                                                <rect key="frame" x="54.5" y="258.5" width="300" height="311"/>
+                                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="4Zf-oA-afx"/>
+                                                                </constraints>
+                                                                <string key="text">This is standard weight-lifting practice, so stick with sets of 7-12 reps so you can exert enough stress on your muscles to force them to grow larger. The key here is short rest periods of 30-60 secs to fully tax the muscle.</string>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                            </textView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="FvC-bf-v3i" firstAttribute="width" secondItem="MkF-gM-mau" secondAttribute="width" id="PMl-7W-hN3"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="A9l-U7-Ehu" firstAttribute="top" secondItem="uBX-9l-obt" secondAttribute="top" constant="22" id="ROV-Pi-xWv"/>
+                                                    <constraint firstAttribute="height" constant="600" id="TNX-yv-bme"/>
+                                                    <constraint firstAttribute="trailing" secondItem="A9l-U7-Ehu" secondAttribute="trailing" constant="2" id="mNw-fi-UsE"/>
+                                                    <constraint firstAttribute="bottom" secondItem="A9l-U7-Ehu" secondAttribute="bottom" constant="8.5" id="tPT-Uv-yA9"/>
+                                                    <constraint firstItem="A9l-U7-Ehu" firstAttribute="leading" secondItem="uBX-9l-obt" secondAttribute="leading" constant="3" id="y1p-7v-m4p"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sCZ-NR-zFp">
+                                                <rect key="frame" x="0.0" y="1800" width="414" height="600"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="shq-af-fTY">
+                                                        <rect key="frame" x="57" y="8" width="300" height="510"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ih2-zu-Cnh">
+                                                                <rect key="frame" x="0.0" y="0.0" width="300" height="36"/>
+                                                                <attributedString key="attributedText">
+                                                                    <fragment content="90% of Your 1RM">
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <font key="NSFont" metaFont="system" size="30"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                </attributedString>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="firstpic" translatesAutoresizingMaskIntoConstraints="NO" id="Ku1-YY-tC4">
+                                                                <rect key="frame" x="0.0" y="73" width="300" height="200"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="200" id="Ori-13-7SK"/>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="exy-SW-Qxh"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dJp-P6-fVM">
+                                                                <rect key="frame" x="0.0" y="310" width="300" height="200"/>
+                                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="200" id="Ls6-QH-vCc"/>
+                                                                    <constraint firstAttribute="width" constant="300" id="cDv-Kr-eOc"/>
+                                                                </constraints>
+                                                                <string key="text">During each repetition accelerate the bar as fast as possible while staying in control with good form. Only do 3-4 reps then take a 2-3 minute rest to recover between the 3-4 sets</string>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                            </textView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="shq-af-fTY" secondAttribute="trailing" constant="57" id="6Rf-jG-wUm"/>
+                                                    <constraint firstAttribute="bottom" secondItem="shq-af-fTY" secondAttribute="bottom" constant="82" id="G31-LZ-dnR"/>
+                                                    <constraint firstItem="shq-af-fTY" firstAttribute="top" secondItem="sCZ-NR-zFp" secondAttribute="top" constant="8" id="OHr-3W-xGh"/>
+                                                    <constraint firstItem="shq-af-fTY" firstAttribute="leading" secondItem="sCZ-NR-zFp" secondAttribute="leading" constant="57" id="onC-13-4Ka"/>
                                                     <constraint firstAttribute="height" constant="600" id="z8L-ak-0rP"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xdR-wW-2gw">
-                                                <rect key="frame" x="0.0" y="600" width="414" height="600"/>
-                                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <rect key="frame" x="0.0" y="2400" width="414" height="600"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="uGi-AB-vK3">
+                                                        <rect key="frame" x="57" y="19" width="300" height="497.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gwn-gP-df3">
+                                                                <rect key="frame" x="0.0" y="0.0" width="300" height="33.5"/>
+                                                                <attributedString key="attributedText">
+                                                                    <fragment content="WORKOUT TIPS">
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <font key="NSFont" size="30" name=".SFNS-Regular"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                </attributedString>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fifithpic" translatesAutoresizingMaskIntoConstraints="NO" id="5jK-wI-ET6">
+                                                                <rect key="frame" x="0.0" y="65.5" width="300" height="200"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="ILn-Zp-A2l"/>
+                                                                    <constraint firstAttribute="height" constant="200" id="WFZ-I6-0rS"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="56A-Q0-gJI">
+                                                                <rect key="frame" x="0.0" y="297.5" width="300" height="200"/>
+                                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="RIy-mr-olk"/>
+                                                                    <constraint firstAttribute="height" constant="200" id="r1K-b8-190"/>
+                                                                </constraints>
+                                                                <attributedString key="attributedText">
+                                                                    <fragment>
+                                                                        <mutableString key="content">1) Limit your workouts to 30-40 minutes. Though the tendency of some people who really want to get a lot out of their workouts is to spend a lot of time at the gym, the truth is that after 30 or 40 minutes, the benefit isn’t as great. To go that long, you’d have to lower the intensity of the workout, and that means that you’re spending too much time working out. It’s better to work out at a higher intensity for a shorter amount of time.
+High-intensity workouts.                2) If you’re just starting out with exercise, it’s best to take it slow. If you’re running or cycling, for example, build up your endurance for at least a month before you get into anything more intense. That means going at a rate where you can easily talk without being out of breath. However, once you have that base of endurance, step up the intensity to step up the effectiveness of the workout.
+Protein. Many people don’t pay enough attention to getting the protein their muscles need to rebuild.         3) If you don’t, you are going to get very little out of your workout, as both cardio and strength workouts require protein for building muscles. I recommend either whey or soy protein shakes.
+Water. Be sure to hydrate throughout the day. It takes a couple of hours for your body to absorb the water, so you can’t just drink right before exercise. Make it a habit to drink water regularly throughout the day.
+Carbs. Although the low-carb craze might say otherwise, carbs are our body’s main source of fuel. If you do intense workouts, you will need carbs, or you won’t have enough energy. If you do a shake, be sure to include carbs — or a banana is a great source of low fiber/high glycemic carbohydrates that you need for exercise.
+Shake before and after workout. It’s best to take a protein/carb shake just before your workout and then just after. Taking it before your workout increases the flow of amino acids to your muscles during training, giving them the building blocks they need. After the workout, the shake stimulates muscle growth. Also take a small protein/carb meal 60-90 minutes after a workout — a meal replacement bar would work fine.
+4) Slow lifting. Many people contract their muscles slowly and then release more quickly. But if you lift slowly in both directions, you are maximizing each move. Lift and lower to a 5-second count in each direction.
+5) Heavier weight. When you’re starting out, it’s best to start with lower weights so you can focus on good form. But once you’ve gotten your form down, it’s best to lift the heaviest weights you can lift while still keeping good form. Don’t sacrifice form for heavy weights — that is ineffective. But heavy weights, with good form, can give you better results in a shorter amount of time. Heavy weights are not just for those who want to bulk up — that’s a common misconception.
+7) One set, to failure. Instead of doing 2-3 sets, as many people do, maximize your effectiveness by doing just one, with heavy weights, until you can no longer keep the proper form. Lifting to “failure” doesn’t mean that you should lift the last few times with a wobbly or inefficient form.
+8) Compound exercises. Instead of isolating your muscles with exercises such as the bicep curl, you can maximize the time you spend in a workout by doing exercises that work out multiple muscle groups at once. With just a few exercises, you could get a full-body workout. Another benefit is that your muscles are working together as they do in the real world, rather than alone. Some great compound exercises include squats, deadlifts, good mornings, lunges, pushups, bench presses, military presses, rows, pullups, dips, and more.
+Balance lifting. Instead of having exercises where you’re sitting down or holding on to something or otherwise stabilized, it’s more effective to do them standing up, or on one leg, or on a Swiss exercise ball. These types of exercises force you to balance yourself while lifting, which brings your core muscles into play. This gives you a stronger overall body and allows you to lift more over time.
+9) Pick a cardio exercise you enjoy. It’s no fun to exercise if you hate it. And you won’t keep it up for very long. Pick something that’s fun — running, walking, swimming, biking, hiking, rowing, stairmaster, etc. After the initial phase when you’re getting used to exercise, you’ll start to have a blast and look forward to it.
+Mix it up. Don’t stick to the same workout routine for too long, or your body will adjust to the stress level and you won’t be getting an effective workout.                                  10) For strength training, change your routine every few weeks. For cardio, it’s best to cross train rather than, say, to run every time.
+Good form. For strength training especially, and swimming, form is very important, but it’s also important for other types of exercise. If you’re strength training, start with lighter weights so you can work on your form. It’s good to have an experienced spotter or trainer who knows good form to help you for the first month or so. Never sacrifice form for heavier weight. For swimming, you’ll need to get a coach to teach you form.
+Hills.                                             11) If you run or bike or walk for cardio, you’ll want to incorporate hills (after the first month or two of doing it at an easy pace on flat ground). These will make you stronger and make your limited workout time even more effective. Take them easy at first, but once you’re used to hills, you can get a good pace going. Either use a hilly route or do repeats on one hill.
+Circuits.                                   12) One mistake that people make is to do multiple sets of the same exercise without rest between the sets. This doesn’t allow your muscles to recover and it’s a waste of your workout. But instead of doing a set, resting, and then doing your second set, it’s more effective to move on to multiple exercises in a circuit, so that you don’t rest between exercises but do rest each muscle group. This will give you a good cardio workout while you do your strength training.</mutableString>
+                                                                        <attributes>
+                                                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <font key="NSFont" size="17" name="Helvetica"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                </attributedString>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                            </textView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="uGi-AB-vK3" secondAttribute="bottom" constant="83.5" id="0i3-zI-MXO"/>
+                                                    <constraint firstAttribute="trailing" secondItem="uGi-AB-vK3" secondAttribute="trailing" constant="57" id="Hbn-aK-Amy"/>
+                                                    <constraint firstItem="uGi-AB-vK3" firstAttribute="top" secondItem="xdR-wW-2gw" secondAttribute="top" constant="19" id="QaP-Tu-b2Z"/>
+                                                    <constraint firstItem="uGi-AB-vK3" firstAttribute="leading" secondItem="xdR-wW-2gw" secondAttribute="leading" constant="57" id="Rxs-P2-FUW"/>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="1000" id="ScA-iK-wjY"/>
                                                     <constraint firstAttribute="height" constant="600" id="V5A-12-qrO"/>
                                                 </constraints>
                                             </view>
@@ -671,7 +937,7 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="d35-Dn-6mx"/>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="KvI-ph-Jxc" firstAttribute="trailing" secondItem="2xI-XU-Y5I" secondAttribute="trailing" id="NmM-lk-uZI"/>
                             <constraint firstItem="KvI-ph-Jxc" firstAttribute="leading" secondItem="2xI-XU-Y5I" secondAttribute="leading" id="hiT-Q1-X53"/>
@@ -682,7 +948,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="xfV-ge-fyU"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JAs-hx-0hv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="676.81159420289862" y="1539.5089285714284"/>
         </scene>
@@ -841,9 +1106,10 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vp4-Js-p81">
-                                <rect key="frame" x="309" y="40" width="77" height="30"/>
-                                <state key="normal" title="info">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vp4-Js-p81">
+                                <rect key="frame" x="309" y="40" width="77" height="22"/>
+                                <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" image="info.circle" catalog="system">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -1268,9 +1534,15 @@
         <segue reference="5xn-r5-5rg"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="4rthpic" width="980" height="979"/>
+        <image name="FirstPageBackground" width="500" height="333"/>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
         <image name="arrowshape.turn.up.left.2.fill" catalog="system" width="128" height="87"/>
         <image name="arrowshape.turn.up.left.fill" catalog="system" width="128" height="106"/>
+        <image name="fifithpic" width="980" height="978"/>
+        <image name="firstpic" width="980" height="979"/>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="thirdpic" width="980" height="975"/>
     </resources>
 </document>
