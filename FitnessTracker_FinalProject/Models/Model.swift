@@ -15,6 +15,7 @@ protocol ModelDelegate {
 
 class Model {
     var delegate:ModelDelegate?
+    
     func getVideos() {
         let url = URL(string: Constants.API_URL)
         guard url != nil else{

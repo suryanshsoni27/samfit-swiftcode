@@ -7,10 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D2D3CDD24BBF7F900CC6A29 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2D3CDC24BBF7F900CC6A29 /* CacheManager.swift */; };
+		9D2D3CDF24BBFB8A00CC6A29 /* FKDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2D3CDE24BBFB8A00CC6A29 /* FKDetailedViewController.swift */; };
 		9D3D19E024BBB3710096566F /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3D19DF24BBB3710096566F /* Video.swift */; };
 		9D3D19E224BBB3BF0096566F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3D19E124BBB3BF0096566F /* Model.swift */; };
 		9D3D19E524BBD3D10096566F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7EC4BB24B6AC92001EAF22 /* AppDelegate.swift */; };
 		9D3D19E724BBD96A0096566F /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3D19E624BBD96A0096566F /* Response.swift */; };
+		9D4B066A24BC03E3006B43A7 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D54497024BADA82008A2D2B /* WebKit.framework */; };
+		9D4B066C24BD211C006B43A7 /* PowerliftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4B066B24BD211C006B43A7 /* PowerliftViewController.swift */; };
+		9D4B066E24BD212A006B43A7 /* cardioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4B066D24BD212A006B43A7 /* cardioViewController.swift */; };
+		9D4B067024BD2146006B43A7 /* yogaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4B066F24BD2146006B43A7 /* yogaViewController.swift */; };
 		9D54497524BAEB40008A2D2B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D54497424BAEB40008A2D2B /* Constants.swift */; };
 		9D7EC4BE24B6AC92001EAF22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7EC4BD24B6AC92001EAF22 /* SceneDelegate.swift */; };
 		9D7EC4C024B6AC92001EAF22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7EC4BF24B6AC92001EAF22 /* ViewController.swift */; };
@@ -23,12 +29,18 @@
 		9D7EC4DA24B6D16C001EAF22 /* CalorrieTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7EC4D924B6D16C001EAF22 /* CalorrieTrackerViewController.swift */; };
 		9D7EC4DC24B6D17C001EAF22 /* FitKitchenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7EC4DB24B6D17C001EAF22 /* FitKitchenViewController.swift */; };
 		9D7EC4DE24B6D18C001EAF22 /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7EC4DD24B6D18C001EAF22 /* TrainingViewController.swift */; };
+		9DC1885A24BBEE3200B67DCD /* FitkitchenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC1885924BBEE3200B67DCD /* FitkitchenTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9D2D3CDC24BBF7F900CC6A29 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		9D2D3CDE24BBFB8A00CC6A29 /* FKDetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FKDetailedViewController.swift; sourceTree = "<group>"; };
 		9D3D19DF24BBB3710096566F /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		9D3D19E124BBB3BF0096566F /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		9D3D19E624BBD96A0096566F /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		9D4B066B24BD211C006B43A7 /* PowerliftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerliftViewController.swift; sourceTree = "<group>"; };
+		9D4B066D24BD212A006B43A7 /* cardioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardioViewController.swift; sourceTree = "<group>"; };
+		9D4B066F24BD2146006B43A7 /* yogaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yogaViewController.swift; sourceTree = "<group>"; };
 		9D54497024BADA82008A2D2B /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		9D54497424BAEB40008A2D2B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9D7EC4B824B6AC92001EAF22 /* FitnessTracker_FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessTracker_FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,6 +57,7 @@
 		9D7EC4D924B6D16C001EAF22 /* CalorrieTrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorrieTrackerViewController.swift; sourceTree = "<group>"; };
 		9D7EC4DB24B6D17C001EAF22 /* FitKitchenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitKitchenViewController.swift; sourceTree = "<group>"; };
 		9D7EC4DD24B6D18C001EAF22 /* TrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
+		9DC1885924BBEE3200B67DCD /* FitkitchenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitkitchenTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D4B066A24BC03E3006B43A7 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,41 +100,71 @@
 		9D7EC4BA24B6AC92001EAF22 /* FitnessTracker_FinalProject */ = {
 			isa = PBXGroup;
 			children = (
-				9D7EC4D424B6CEC9001EAF22 /* Helpers */,
-				9D7EC4CF24B6B703001EAF22 /* View Controllers */,
 				9D7EC4BB24B6AC92001EAF22 /* AppDelegate.swift */,
-				9D7EC4D024B6B72D001EAF22 /* FirstPageUserIncomingViewController.swift */,
-				9D7EC4D724B6D0A6001EAF22 /* ThreeButtonsForSelectViewController.swift */,
-				9D7EC4D924B6D16C001EAF22 /* CalorrieTrackerViewController.swift */,
-				9D7EC4DB24B6D17C001EAF22 /* FitKitchenViewController.swift */,
-				9D7EC4DD24B6D18C001EAF22 /* TrainingViewController.swift */,
-				9D7EC4BF24B6AC92001EAF22 /* ViewController.swift */,
 				9D7EC4BD24B6AC92001EAF22 /* SceneDelegate.swift */,
-				9D7EC4C124B6AC92001EAF22 /* Main.storyboard */,
+				9DC1885E24BBEE7F00B67DCD /* Storyboards */,
+				9DC1885D24BBEE7300B67DCD /* Models */,
+				9DC1885C24BBEE6500B67DCD /* Views */,
+				9DC1885B24BBEE4100B67DCD /* View Controllers */,
+				9D7EC4D424B6CEC9001EAF22 /* Helpers */,
 				9D7EC4C424B6AC93001EAF22 /* Assets.xcassets */,
-				9D7EC4C624B6AC93001EAF22 /* LaunchScreen.storyboard */,
 				9D7EC4C924B6AC93001EAF22 /* Info.plist */,
-				9D54497424BAEB40008A2D2B /* Constants.swift */,
-				9D3D19DF24BBB3710096566F /* Video.swift */,
-				9D3D19E124BBB3BF0096566F /* Model.swift */,
-				9D3D19E624BBD96A0096566F /* Response.swift */,
 			);
 			path = FitnessTracker_FinalProject;
-			sourceTree = "<group>";
-		};
-		9D7EC4CF24B6B703001EAF22 /* View Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 		9D7EC4D424B6CEC9001EAF22 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				9D7EC4D524B6CEE4001EAF22 /* Utilities.swift */,
+				9D54497424BAEB40008A2D2B /* Constants.swift */,
+				9D2D3CDC24BBF7F900CC6A29 /* CacheManager.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		9DC1885B24BBEE4100B67DCD /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9D7EC4D024B6B72D001EAF22 /* FirstPageUserIncomingViewController.swift */,
+				9D7EC4D724B6D0A6001EAF22 /* ThreeButtonsForSelectViewController.swift */,
+				9D7EC4D924B6D16C001EAF22 /* CalorrieTrackerViewController.swift */,
+				9D7EC4DB24B6D17C001EAF22 /* FitKitchenViewController.swift */,
+				9D7EC4DD24B6D18C001EAF22 /* TrainingViewController.swift */,
+				9D7EC4BF24B6AC92001EAF22 /* ViewController.swift */,
+				9D2D3CDE24BBFB8A00CC6A29 /* FKDetailedViewController.swift */,
+				9D4B066B24BD211C006B43A7 /* PowerliftViewController.swift */,
+				9D4B066D24BD212A006B43A7 /* cardioViewController.swift */,
+				9D4B066F24BD2146006B43A7 /* yogaViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		9DC1885C24BBEE6500B67DCD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9DC1885924BBEE3200B67DCD /* FitkitchenTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9DC1885D24BBEE7300B67DCD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9D3D19DF24BBB3710096566F /* Video.swift */,
+				9D3D19E124BBB3BF0096566F /* Model.swift */,
+				9D3D19E624BBD96A0096566F /* Response.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9DC1885E24BBEE7F00B67DCD /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				9D7EC4C124B6AC92001EAF22 /* Main.storyboard */,
+				9D7EC4C624B6AC93001EAF22 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,17 +239,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D3D19E524BBD3D10096566F /* AppDelegate.swift in Sources */,
+				9D2D3CDD24BBF7F900CC6A29 /* CacheManager.swift in Sources */,
 				9D7EC4DE24B6D18C001EAF22 /* TrainingViewController.swift in Sources */,
 				9D7EC4C024B6AC92001EAF22 /* ViewController.swift in Sources */,
+				9D4B067024BD2146006B43A7 /* yogaViewController.swift in Sources */,
 				9D7EC4DC24B6D17C001EAF22 /* FitKitchenViewController.swift in Sources */,
+				9D2D3CDF24BBFB8A00CC6A29 /* FKDetailedViewController.swift in Sources */,
 				9D3D19E224BBB3BF0096566F /* Model.swift in Sources */,
 				9D7EC4D824B6D0A6001EAF22 /* ThreeButtonsForSelectViewController.swift in Sources */,
 				9D3D19E724BBD96A0096566F /* Response.swift in Sources */,
 				9D7EC4DA24B6D16C001EAF22 /* CalorrieTrackerViewController.swift in Sources */,
+				9D4B066C24BD211C006B43A7 /* PowerliftViewController.swift in Sources */,
 				9D54497524BAEB40008A2D2B /* Constants.swift in Sources */,
+				9D4B066E24BD212A006B43A7 /* cardioViewController.swift in Sources */,
 				9D7EC4BE24B6AC92001EAF22 /* SceneDelegate.swift in Sources */,
 				9D7EC4D624B6CEE4001EAF22 /* Utilities.swift in Sources */,
 				9D3D19E024BBB3710096566F /* Video.swift in Sources */,
+				9DC1885A24BBEE3200B67DCD /* FitkitchenTableViewCell.swift in Sources */,
 				9D7EC4D124B6B72D001EAF22 /* FirstPageUserIncomingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

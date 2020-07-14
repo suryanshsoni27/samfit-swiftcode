@@ -287,46 +287,20 @@ class CalorrieTrackerViewController: UIViewController {
                                             bmr = bmr + 88.362
                                             bmr = bmr.rounded()
                                             if self.choiceOutlet.selectedSegmentIndex == 0 {
-                                                let text = "> You had \(self.caloriesInput.text! ) calories , \(self.carbInput.text! ) carbohydrates, \(self.proteinInput.text! ) protiens and \(self.FatsInput.text! ) Fats.\n> \(bmr) is your BMR(Basal metabolic rate).\n > In order to gain muscle and weight, you need to eat \n \t \(bmr + 300) to \(bmr + 500) calories"
+                                                let text = "> You had \(self.caloriesInput.text! ) calories , \(self.carbInput.text! ) Carbohydrates, \(self.proteinInput.text! ) Protiens and \(self.FatsInput.text! ) Fats.\n> \(bmr) is your BMR(Basal metabolic rate).\n > In order to gain muscle and weight, you need to eat \n \t \(bmr + 300) to \(bmr + 500) calories"
                                                 
                                                 
                                                 
-                                                
-//                                                let text1 = "- You had \(self.caloriesInput.text! ) calories , \(self.carbInput.text! ) carbohydrates, \(self.proteinInput.text! ) protiens and \(self.FatsInput.text! ) Fats.\n- \(bmr) is your BMR(Basal metabolic rate).\n- In order to gain muscle and weight, you need to eat \n \t \(bmr + 300) to \(bmr + 500) calories" as NSString
-//
-//
-//
-//
-//                                                 let attributedString1 = NSMutableAttributedString(string: text1 as String, attributes: [NSAttributedString.Key.font:UIFont.systemFont(ofSize: 15.0)])
-//
-//                                                 let boldFontAttribute = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 15.0)]
-//
-//                                                 // Part of string to be bold
-//                                                 attributedString1.addAttributes(boldFontAttribute, range: text1.range(of:"- You had \(self.caloriesInput.text! ) calories , \(self.carbInput.text! ) carbohydrates, \(self.proteinInput.text! ) protiens and \(self.FatsInput.text! ) Fats.\n- \(bmr) is your BMR(Basal metabolic rate).\n- In order to gain muscle and weight, you need to eat \n \t \(bmr + 300) to \(bmr + 500) calories"))
-//
-//
-//
-//                                                 
-//
-//                                                 self.textField.attributedText = attributedString1
-//
+                                
                                                 self.textField.text = text
                                             }
                                             else if self.choiceOutlet.selectedSegmentIndex == 1 {
-                                                let text = "> You had \(self.caloriesInput.text! ) calories, \(self.carbInput.text! ) carbohydrates, \(self.proteinInput.text! ) protiens and \(self.FatsInput.text! ) Fats. \n> \(bmr) is your BMR(Basal metabolic rate).\n > In order to lose fat in a healthy way you need to eat\n \t \(bmr - 500) to \(bmr - 300) calories "
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
+                                                let text = "> You had \(self.caloriesInput.text! ) calories, \(self.carbInput.text! ) Carbohydrates, \(self.proteinInput.text! ) Protiens and \(self.FatsInput.text! ) Fats. \n> \(bmr) is your BMR(Basal metabolic rate).\n > In order to lose fat in a healthy way you need to eat\n \t \(bmr - 500) to \(bmr - 300) calories "
+       
                                                 self.textField.text = text
                                             }
                                             else {
-                                                let text = "You had \(self.caloriesInput.text! ) calories, \(self.carbInput.text! ) carbohydrates, \(self.proteinInput.text! ) protiens and \(self.FatsInput.text! ) Fats. \n > \(bmr) is your BMR(Basal metabolic rate).\n > In order to maintian weight you need to eat \n \t \(bmr - 200) to \(bmr + 200) calories "
+                                                let text = "You had \(self.caloriesInput.text! ) calories, \(self.carbInput.text! ) Carbohydrates, \(self.proteinInput.text! ) Protiens and \(self.FatsInput.text! ) Fats. \n > \(bmr) is your BMR(Basal metabolic rate).\n > In order to maintian weight you need to eat \n \t \(bmr - 200) to \(bmr + 200) calories "
                                                 
                                                 
                                                 
@@ -356,15 +330,15 @@ class CalorrieTrackerViewController: UIViewController {
                                             bmr = bmr + 88.362
                                             bmr = bmr.rounded()
                                             if self.choiceOutlet.selectedSegmentIndex == 0 {
-                                                let text = "> You had \(self.caloriesInput.text! ) calories , \(self.carbInput.text! ) carbohydrates, \(self.proteinInput.text! ) protiens and \(self.FatsInput.text! ) Fats.\n> \(bmr) is your BMR(Basal metabolic rate).\n > In order to gain muslce and weight you need to eat \n \t \(bmr + 300) to \(bmr + 500) calories"
+                                                let text = "> You had \(self.caloriesInput.text! ) calories , \(self.carbInput.text! ) Carbohydrates, \(self.proteinInput.text! ) Protiens and \(self.FatsInput.text! ) Fats.\n> \(bmr) is your BMR(Basal metabolic rate).\n > In order to gain muslce and weight you need to eat \n \t \(bmr + 300) to \(bmr + 500) calories"
                                                 self.textField.text = text
                                             }
                                             else if self.choiceOutlet.selectedSegmentIndex == 1 {
-                                                let text = "> You had \(self.caloriesInput.text! ) calories, \(self.carbInput.text! ) carbohydrates, \(self.proteinInput.text! ) protiens and \(self.FatsInput.text! ) Fats. \n> \(bmr) is your BMR(Basal metabolic rate).\n > In order to lose fat in good manner you need to eat\n \t \(bmr - 500) to \(bmr - 300) calories "
+                                                let text = "> You had \(self.caloriesInput.text! ) calories, \(self.carbInput.text! ) Carbohydrates, \(self.proteinInput.text! ) Protiens and \(self.FatsInput.text! ) Fats. \n> \(bmr) is your BMR(Basal metabolic rate).\n > In order to lose fat in good manner you need to eat\n \t \(bmr - 500) to \(bmr - 300) calories "
                                                 self.textField.text = text
                                             }
                                             else {
-                                                let text = "You had \(self.caloriesInput.text! ) calories, \(self.carbInput.text! ) carbohydrates, \(self.proteinInput.text! ) protiens and \(self.FatsInput.text! ) Fats. \n > \(bmr) is your BMR(Basal metabolic rate).\n > In order to maintian weight you need to eat \n \t \(bmr - 200) to \(bmr + 200) calories "
+                                                let text = "You had \(self.caloriesInput.text! ) calories, \(self.carbInput.text! ) Carbohydrates, \(self.proteinInput.text! ) Protiens and \(self.FatsInput.text! ) Fats. \n > \(bmr) is your BMR(Basal metabolic rate).\n > In order to maintian weight you need to eat \n \t \(bmr - 200) to \(bmr + 200) calories "
                                                 self.textField.text = text}
 
 
