@@ -163,6 +163,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="A2x-Vc-5QY"/>
                                 </constraints>
@@ -1394,7 +1395,7 @@ Circuits.                                   12) One mistake that people make is 
                                     <constraint firstAttribute="height" constant="29" id="MFI-fR-PzJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Yoga">
+                                <state key="normal" title="Meditate">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -1460,21 +1461,90 @@ Circuits.                                   12) One mistake that people make is 
             </objects>
             <point key="canvasLocation" x="2847.826086956522" y="1009.8214285714286"/>
         </scene>
-        <!--Yoga View Controller-->
+        <!--Meditate View Controller-->
         <scene sceneID="nsK-zk-FJa">
             <objects>
-                <viewController id="42R-4s-fmX" customClass="yogaViewController" customModule="FitnessTracker_FinalProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="42R-4s-fmX" customClass="meditateViewController" customModule="FitnessTracker_FinalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j4z-td-xPJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meditate" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f29-TC-hf6">
+                                <rect key="frame" x="20" y="50" width="374" height="51.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="43"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="d1s-aM-YsG">
+                                <rect key="frame" x="18" y="260" width="378" height="39"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="sliderFunc:" destination="42R-4s-fmX" eventType="valueChanged" id="MSN-F4-1ps"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rpT-gg-VG6">
+                                <rect key="frame" x="20" y="341" width="374" height="46"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="startFunc:" destination="42R-4s-fmX" eventType="touchUpInside" id="xfz-Zr-KHs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hui-vZ-6Zm">
+                                <rect key="frame" x="20" y="406" width="374" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="timerstop:" destination="42R-4s-fmX" eventType="touchUpInside" id="LaT-c9-oCk"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Up-3B-IgC">
+                                <rect key="frame" x="80" y="161.5" width="254" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rpT-gg-VG6" firstAttribute="top" secondItem="d1s-aM-YsG" secondAttribute="bottom" constant="43" id="1Vy-gY-Kjk"/>
+                            <constraint firstItem="lXI-ji-nYq" firstAttribute="trailing" secondItem="rpT-gg-VG6" secondAttribute="trailing" constant="20" id="262-vR-pCA"/>
+                            <constraint firstItem="lXI-ji-nYq" firstAttribute="trailing" secondItem="f29-TC-hf6" secondAttribute="trailing" constant="20" id="D55-8b-OHc"/>
+                            <constraint firstItem="lXI-ji-nYq" firstAttribute="trailing" secondItem="d1s-aM-YsG" secondAttribute="trailing" constant="20" id="GKR-0V-Vps"/>
+                            <constraint firstItem="d1s-aM-YsG" firstAttribute="top" secondItem="2Up-3B-IgC" secondAttribute="bottom" constant="60" id="Gf7-cH-kAb"/>
+                            <constraint firstItem="f29-TC-hf6" firstAttribute="top" secondItem="lXI-ji-nYq" secondAttribute="top" constant="50" id="JKZ-45-6eH"/>
+                            <constraint firstItem="d1s-aM-YsG" firstAttribute="leading" secondItem="lXI-ji-nYq" secondAttribute="leading" constant="20" id="JjH-Mp-e6Q"/>
+                            <constraint firstItem="lXI-ji-nYq" firstAttribute="trailing" secondItem="f29-TC-hf6" secondAttribute="trailing" constant="20" id="Rd7-ZP-caJ"/>
+                            <constraint firstItem="f29-TC-hf6" firstAttribute="leading" secondItem="lXI-ji-nYq" secondAttribute="leading" constant="20" id="Rg1-q8-Cbt"/>
+                            <constraint firstItem="2Up-3B-IgC" firstAttribute="leading" secondItem="lXI-ji-nYq" secondAttribute="leading" constant="80" id="Ti8-Xk-CPO"/>
+                            <constraint firstItem="lXI-ji-nYq" firstAttribute="bottom" secondItem="d1s-aM-YsG" secondAttribute="bottom" constant="510" id="UHA-lQ-gER"/>
+                            <constraint firstItem="f29-TC-hf6" firstAttribute="leading" secondItem="lXI-ji-nYq" secondAttribute="leading" constant="20" id="UqT-N6-kcW"/>
+                            <constraint firstItem="rpT-gg-VG6" firstAttribute="leading" secondItem="lXI-ji-nYq" secondAttribute="leading" constant="20" id="Vo5-n5-OrE"/>
+                            <constraint firstItem="2Up-3B-IgC" firstAttribute="top" secondItem="f29-TC-hf6" secondAttribute="bottom" constant="60" id="dq9-l8-chP"/>
+                            <constraint firstItem="lXI-ji-nYq" firstAttribute="trailing" secondItem="Hui-vZ-6Zm" secondAttribute="trailing" constant="20" id="fvG-E9-kXu"/>
+                            <constraint firstItem="f29-TC-hf6" firstAttribute="top" secondItem="lXI-ji-nYq" secondAttribute="top" constant="50" id="hCg-3Y-8I4"/>
+                            <constraint firstItem="lXI-ji-nYq" firstAttribute="trailing" secondItem="2Up-3B-IgC" secondAttribute="trailing" constant="80" id="i0r-cL-2Os"/>
+                            <constraint firstItem="Hui-vZ-6Zm" firstAttribute="top" secondItem="rpT-gg-VG6" secondAttribute="bottom" constant="19" id="ibd-FU-eIh"/>
+                            <constraint firstItem="Hui-vZ-6Zm" firstAttribute="leading" secondItem="lXI-ji-nYq" secondAttribute="leading" constant="20" id="sB9-ck-wmP"/>
+                            <constraint firstItem="Hui-vZ-6Zm" firstAttribute="top" secondItem="rpT-gg-VG6" secondAttribute="bottom" constant="19" id="tJq-Em-DL1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="lXI-ji-nYq"/>
                     </view>
                     <navigationItem key="navigationItem" id="ZOR-VA-MPa"/>
+                    <connections>
+                        <outlet property="slider" destination="d1s-aM-YsG" id="dUU-3F-Djf"/>
+                        <outlet property="start" destination="rpT-gg-VG6" id="oUL-ia-N5X"/>
+                        <outlet property="stop" destination="Hui-vZ-6Zm" id="4BF-oM-dGg"/>
+                        <outlet property="timerlab" destination="2Up-3B-IgC" id="5s4-Sp-Uai"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jev-aA-PmW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4539" y="1542"/>
+            <point key="canvasLocation" x="4537.68115942029" y="1541.5178571428571"/>
         </scene>
         <!--Cardio View Controller-->
         <scene sceneID="qOu-XM-5vg">
@@ -1731,21 +1801,21 @@ Circuits.                                   12) One mistake that people make is 
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fAM-ma-oVs">
                                 <rect key="frame" x="20" y="20" width="374" height="768"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rnR-iQ-PAC">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gua-N2-nOD">
-                                        <rect key="frame" x="0.0" y="30.5" width="374" height="22"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="22"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" image="arrowshape.turn.up.left.2.fill" catalog="system"/>
                                         <connections>
                                             <segue destination="pov-yH-SZz" kind="show" id="OOL-ZX-IeR"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJ6-0N-LDd">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rnR-iQ-PAC">
+                                        <rect key="frame" x="0.0" y="32" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJ6-0N-LDd">
                                         <rect key="frame" x="0.0" y="62.5" width="374" height="20.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1792,7 +1862,7 @@ Circuits.                                   12) One mistake that people make is 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sEb-bN-RXI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3722" y="134"/>
+            <point key="canvasLocation" x="3721.739130434783" y="133.92857142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yWS-wy-Yjq">
@@ -1813,10 +1883,10 @@ Circuits.                                   12) One mistake that people make is 
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="T2I-4D-wZp"/>
+        <segue reference="OOL-ZX-IeR"/>
         <segue reference="aTt-HT-mlc"/>
         <segue reference="a52-AQ-jB3"/>
-        <segue reference="5xn-r5-5rg"/>
+        <segue reference="8xL-Wg-72C"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="4rthpic" width="980" height="979"/>
