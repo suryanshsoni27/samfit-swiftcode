@@ -9,6 +9,10 @@
 import UIKit
 
 class CalorrieTrackerViewController: UIViewController {
+    
+    fileprivate static let rootKey = "rootKey"
+    @IBOutlet var lineFields:[UITextField]!
+    
     //MARK: outlets defined
     @IBOutlet weak var caloriesInput: UITextField!
     @IBOutlet weak var carbInput: UITextField!
@@ -34,8 +38,21 @@ class CalorrieTrackerViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         Utilities.styleFilledButton(calculateButton)
+        let fileURL = self.dataFileURL()
+        if (FileManager.default.fileExists(atPath: fileURL.path!)) {
+            if let array = NSArray(contentsOf: fileURL as URL) as? [String]{
+                for i in 0..<array.count {
+                    lineFields[i].text = array[i]
+                }
+            }
+        }
+        let app = UIApplication.shared
+        NotificationCenter.default.addObserver(self, selector: #selector(self.applicationWillResignActive(notification:)), name: UIApplication.willResignActiveNotification, object: app)
         
     }
+    
+    
+    
    // Set the shouldAutorotate to False
    
     
@@ -414,6 +431,29 @@ class CalorrieTrackerViewController: UIViewController {
         weightText.resignFirstResponder()
         ageText.resignFirstResponder()
     }
+    
+    
+    @objc func
+        applicationWillResignActive(notification:NSNotification) {
+        let fileURL = self.dataFileURL()
+        let array = (self.lineFields as NSArray).value(forKey: "text") as! NSArray
+        array.write(to: fileURL as URL, atomically: true)
+    }
+    
+    
+    func dataFileURL() -> NSURL {
+        let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        var url:NSURL?
+        url = URL(fileURLWithPath: "") as NSURL?
+        url = urls.first?.appendingPathComponent("data.archive") as NSURL?
+        return url!
+    }
+    
+    
+    
+    
+    
+    
     
 }
 

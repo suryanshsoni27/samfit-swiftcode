@@ -612,6 +612,13 @@
                         <outlet property="weight" destination="3yU-ku-A2Q" id="6p2-wF-F7I"/>
                         <outlet property="weightLabel" destination="0PD-2W-szx" id="d8h-LC-O4c"/>
                         <outlet property="weightText" destination="VNk-3O-Xsg" id="UC7-RG-aDp"/>
+                        <outletCollection property="lineFields" destination="a09-O3-2eI" collectionClass="NSMutableArray" id="6pR-C4-TAz"/>
+                        <outletCollection property="lineFields" destination="Syb-5z-XpW" collectionClass="NSMutableArray" id="yff-pl-kvs"/>
+                        <outletCollection property="lineFields" destination="viC-hK-2BT" collectionClass="NSMutableArray" id="mfG-zo-OqY"/>
+                        <outletCollection property="lineFields" destination="hyo-dY-Yec" collectionClass="NSMutableArray" id="oLo-GA-Wj3"/>
+                        <outletCollection property="lineFields" destination="LuN-1d-EqJ" collectionClass="NSMutableArray" id="d34-f8-1nL"/>
+                        <outletCollection property="lineFields" destination="VNk-3O-Xsg" collectionClass="NSMutableArray" id="fiL-bl-tLe"/>
+                        <outletCollection property="lineFields" destination="4ev-0e-Msj" collectionClass="NSMutableArray" id="nrF-2g-dqu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jau-UO-C03" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1374,6 +1381,11 @@ Circuits.                                   12) One mistake that people make is 
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="rqq-9O-ztO" kind="popoverPresentation" popoverAnchorView="5fR-RA-t71" id="byu-FK-Fwz">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ay9-rr-UxP">
                                 <rect key="frame" x="161" y="406" width="92" height="30"/>
@@ -1508,16 +1520,26 @@ Circuits.                                   12) One mistake that people make is 
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nSK-LF-ZRC">
+                                <rect key="frame" x="36" y="20" width="19.5" height="22"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="arrow.left" catalog="system"/>
+                                <connections>
+                                    <segue destination="jxF-W9-GH3" kind="show" id="goM-DB-5JO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="rpT-gg-VG6" firstAttribute="top" secondItem="d1s-aM-YsG" secondAttribute="bottom" constant="43" id="1Vy-gY-Kjk"/>
                             <constraint firstItem="lXI-ji-nYq" firstAttribute="trailing" secondItem="rpT-gg-VG6" secondAttribute="trailing" constant="20" id="262-vR-pCA"/>
+                            <constraint firstItem="nSK-LF-ZRC" firstAttribute="leading" secondItem="lXI-ji-nYq" secondAttribute="leading" constant="36" id="5TV-VR-anw"/>
                             <constraint firstItem="lXI-ji-nYq" firstAttribute="trailing" secondItem="f29-TC-hf6" secondAttribute="trailing" constant="20" id="D55-8b-OHc"/>
                             <constraint firstItem="lXI-ji-nYq" firstAttribute="trailing" secondItem="d1s-aM-YsG" secondAttribute="trailing" constant="20" id="GKR-0V-Vps"/>
                             <constraint firstItem="d1s-aM-YsG" firstAttribute="top" secondItem="2Up-3B-IgC" secondAttribute="bottom" constant="60" id="Gf7-cH-kAb"/>
                             <constraint firstItem="f29-TC-hf6" firstAttribute="top" secondItem="lXI-ji-nYq" secondAttribute="top" constant="50" id="JKZ-45-6eH"/>
                             <constraint firstItem="d1s-aM-YsG" firstAttribute="leading" secondItem="lXI-ji-nYq" secondAttribute="leading" constant="20" id="JjH-Mp-e6Q"/>
+                            <constraint firstItem="nSK-LF-ZRC" firstAttribute="top" secondItem="lXI-ji-nYq" secondAttribute="top" constant="20" id="PCf-rh-mZp"/>
                             <constraint firstItem="lXI-ji-nYq" firstAttribute="trailing" secondItem="f29-TC-hf6" secondAttribute="trailing" constant="20" id="Rd7-ZP-caJ"/>
                             <constraint firstItem="f29-TC-hf6" firstAttribute="leading" secondItem="lXI-ji-nYq" secondAttribute="leading" constant="20" id="Rg1-q8-Cbt"/>
                             <constraint firstItem="2Up-3B-IgC" firstAttribute="leading" secondItem="lXI-ji-nYq" secondAttribute="leading" constant="80" id="Ti8-Xk-CPO"/>
@@ -1544,7 +1566,7 @@ Circuits.                                   12) One mistake that people make is 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jev-aA-PmW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4537.68115942029" y="1541.5178571428571"/>
+            <point key="canvasLocation" x="5014" y="1221"/>
         </scene>
         <!--Cardio View Controller-->
         <scene sceneID="qOu-XM-5vg">
@@ -1678,6 +1700,84 @@ Circuits.                                   12) One mistake that people make is 
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8dh-No-P5z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2847.826086956522" y="1800"/>
+        </scene>
+        <!--Shopping Apparel View Controller-->
+        <scene sceneID="Ryo-vS-p78">
+            <objects>
+                <viewController id="rqq-9O-ztO" customClass="shoppingApparelViewController" customModule="FitnessTracker_FinalProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lG7-5J-C5Z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="olK-PC-GVV">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="280" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zLo-dD-Ry6">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="280"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="zLo-dD-Ry6" secondAttribute="height" multiplier="207:140" id="4NI-gd-Ljj"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="280" id="oJ3-Yh-3DS"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="GymShark" image="gymshark">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="gymsharkbut:" destination="rqq-9O-ztO" eventType="touchUpInside" id="mFH-Jk-Zbu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GGv-4d-HBU">
+                                        <rect key="frame" x="0.0" y="280" width="414" height="281"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="GGv-4d-HBU" secondAttribute="height" multiplier="414:281" id="570-hY-24U"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="280" id="Ghk-fd-Fsg"/>
+                                        </constraints>
+                                        <state key="normal" title="nike" image="nike">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nikebut:" destination="rqq-9O-ztO" eventType="touchUpInside" id="d7e-ny-WgK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRJ-KS-2e7">
+                                        <rect key="frame" x="0.0" y="561" width="414" height="281"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="aRJ-KS-2e7" secondAttribute="height" multiplier="414:281" id="P0h-Zv-ir1"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="280" id="QIt-RM-Iwd"/>
+                                        </constraints>
+                                        <state key="normal" title="adidas" image="underarmous">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="underarmour:" destination="rqq-9O-ztO" eventType="touchUpInside" id="T01-Gy-lgp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="aRJ-KS-2e7" firstAttribute="height" secondItem="GGv-4d-HBU" secondAttribute="height" id="aPL-9s-nN4"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="olK-PC-GVV" secondAttribute="bottom" id="UDx-VG-gUc"/>
+                            <constraint firstItem="olK-PC-GVV" firstAttribute="trailing" secondItem="0qM-UF-pUd" secondAttribute="trailing" id="Uft-Mq-bLl"/>
+                            <constraint firstItem="olK-PC-GVV" firstAttribute="leading" secondItem="lG7-5J-C5Z" secondAttribute="leading" id="iVq-gl-rqH"/>
+                            <constraint firstAttribute="bottom" secondItem="olK-PC-GVV" secondAttribute="bottom" id="mJU-jy-CgV"/>
+                            <constraint firstItem="olK-PC-GVV" firstAttribute="top" secondItem="0qM-UF-pUd" secondAttribute="top" id="o9s-km-2gB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0qM-UF-pUd"/>
+                    </view>
+                    <connections>
+                        <outlet property="addidas" destination="aRJ-KS-2e7" id="k6c-do-d1c"/>
+                        <outlet property="gymShark" destination="zLo-dD-Ry6" id="3ie-DS-Rad"/>
+                        <outlet property="nike" destination="GGv-4d-HBU" id="HuL-GY-uE4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WBS-c0-V24" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4169.5652173913049" y="1847.5446428571427"/>
         </scene>
         <!--Fit Kitchen View Controller-->
         <scene sceneID="NDQ-6F-wVi">
@@ -1884,20 +1984,23 @@ Circuits.                                   12) One mistake that people make is 
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="OOL-ZX-IeR"/>
-        <segue reference="aTt-HT-mlc"/>
+        <segue reference="goM-DB-5JO"/>
         <segue reference="a52-AQ-jB3"/>
         <segue reference="8xL-Wg-72C"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="4rthpic" width="980" height="979"/>
         <image name="FirstPageBackground" width="500" height="333"/>
-        <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <image name="arrow.left" catalog="system" width="32" height="32"/>
         <image name="arrowshape.turn.up.left.2.fill" catalog="system" width="128" height="87"/>
         <image name="arrowshape.turn.up.left.fill" catalog="system" width="128" height="106"/>
         <image name="fifithpic" width="980" height="978"/>
         <image name="firstpic" width="980" height="979"/>
+        <image name="gymshark" width="1280" height="720"/>
         <image name="info.circle" catalog="system" width="128" height="121"/>
+        <image name="nike" width="1920" height="1088"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="thirdpic" width="980" height="975"/>
+        <image name="underarmous" width="512" height="490"/>
     </resources>
 </document>
