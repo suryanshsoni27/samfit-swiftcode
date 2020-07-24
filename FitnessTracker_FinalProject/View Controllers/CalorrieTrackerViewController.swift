@@ -27,12 +27,25 @@ class CalorrieTrackerViewController: UIViewController {
     @IBOutlet weak var height: UILabel!
     @IBOutlet weak var weight: UILabel!
     @IBOutlet weak var ageText: UITextField!
-    
     @IBOutlet weak var kgtolb: UISegmentedControl!
     @IBOutlet weak var heightLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
+    
+    
+    
+    
+    
+    @IBOutlet weak var callab: UILabel!
+    func changeTexture() {
+        callab.layer.cornerRadius = 8.0
+    }
+    
+    
+    
+    
     override func viewDidLoad() {
+        changeTexture()
         super.viewDidLoad()
         
         
