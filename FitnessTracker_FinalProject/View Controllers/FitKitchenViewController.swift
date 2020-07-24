@@ -34,19 +34,15 @@ class FitKitchenViewController: UIViewController,UITableViewDataSource,UITableVi
     }
     
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-  
         guard tableView.indexPathForSelectedRow != nil else {
             return
         }
-        
-       
         let sv = videos[tableView.indexPathForSelectedRow!.row]
-        
-
+    if (segue.identifier == "showVideo") {
         let detailVC = segue.destination as! FKDetailedViewController
-     
         detailVC.video = sv
+    }
+        
     }
     
     

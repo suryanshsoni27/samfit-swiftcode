@@ -37,8 +37,10 @@ class powerliftvideosViewController: UIViewController,UITableViewDataSource,UITa
                 return
             }
             let sv = videos[tableView.indexPathForSelectedRow!.row]
+        
             let detailVC = segue.destination as! PowerliftDetailViewController
             detailVC.video = sv
+        
         }
         
         

@@ -37,7 +37,7 @@ class CalorrieTrackerViewController: UIViewController {
         
         
         // Do any additional setup after loading the view.
-        Utilities.styleFilledButton(calculateButton)
+        Utilities.buttonStyle(calculateButton)
         let fileURL = self.dataFileURL()
         if (FileManager.default.fileExists(atPath: fileURL.path!)) {
             if let array = NSArray(contentsOf: fileURL as URL) as? [String]{

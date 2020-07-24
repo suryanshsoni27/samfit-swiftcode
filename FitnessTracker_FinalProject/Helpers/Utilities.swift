@@ -12,22 +12,15 @@ import UIKit
 
 class Utilities {
     
-    static func styleTextField(_ textfield:UITextField) {
-        let bottomLine = CALayer()
-        bottomLine.backgroundColor = UIColor.init(red: 255/255, green: 255/255, blue: 255/255, alpha: 1).cgColor
-        textfield.borderStyle = .none
-        textfield.layer.addSublayer(bottomLine)
-        
-        
-    }
     
-    static func styleFilledButton(_ button:UIButton) {
+    
+    static func buttonStyle(_ button:UIButton) {
         button.backgroundColor = UIColor.init(red: 255/255, green: 255/255, blue: 255/255, alpha: 0.4)
         button.layer.cornerRadius = 5.0
         button.tintColor = UIColor.white
     }
     
-    static func styleHollowButton(_ button:UIButton) {
+    static func hollowStyle(_ button:UIButton) {
         button.layer.borderWidth = 2
         button.layer.borderColor = UIColor.black.cgColor
         button.layer.cornerRadius = 25.0

@@ -13,6 +13,7 @@ class meditateViewController: UIViewController {
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var start: UIButton!
     @IBOutlet weak var stop: UIButton!
+    @IBOutlet weak var resultLabel: UILabel!
     
     var seconds = 0
     var timer = Timer()
@@ -31,6 +32,7 @@ class meditateViewController: UIViewController {
     
     @IBAction func startFunc(_ sender: Any) {
          timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(meditateViewController.counter), userInfo: nil, repeats: true)
+        resultLabel.text = ""
     }
     
     @objc func counter() {
@@ -49,6 +51,7 @@ class meditateViewController: UIViewController {
         seconds = 0
         slider.setValue(0, animated: true)
         timerlab.text = "0" + " seconds"
+        resultLabel.text = "You're relaxed now\n Try doing for longer"
     }
     
     

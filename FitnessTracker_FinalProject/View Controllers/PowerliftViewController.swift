@@ -33,7 +33,7 @@ class PowerliftViewController: UIViewController,UIPickerViewDataSource,UIPickerV
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        Utilities.styleFilledButton(calBut)
+        Utilities.buttonStyle(calBut)
     }
     
     

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iUQ-4l-B6g">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iUQ-4l-B6g">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -43,6 +43,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="CDZ-ei-8bA"/>
+                    <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -76,7 +77,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="pov-yH-SZz" kind="show" id="JQC-Vs-AD1"/>
+                                            <segue destination="pov-yH-SZz" kind="show" identifier="GoingBack" id="hKL-hd-eCS"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ahv-h6-OPo">
@@ -452,7 +453,7 @@
                                 <variation key="heightClass=regular-widthClass=compact" spacing="27"/>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ylm-gD-xC4" userLabel="plusButtonStack">
-                                <rect key="frame" x="195" y="54" width="25" height="124"/>
+                                <rect key="frame" x="195" y="57.5" width="25" height="124"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4N-30-1ck">
                                         <rect key="frame" x="0.0" y="0.0" width="25" height="22"/>
@@ -514,11 +515,18 @@
                                     <action selector="calculateButton:" destination="EvD-5u-cu5" eventType="touchUpInside" id="fX3-3P-eaC"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Macros" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQi-jC-K20">
-                                <rect key="frame" x="136" y="0.0" width="97" height="26.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQi-jC-K20">
+                                <rect key="frame" x="136" y="0.0" width="97" height="30"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Macros">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="24"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1078,7 +1086,7 @@ Circuits.                                   12) One mistake that people make is 
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" backgroundImage="arrow.left" catalog="system"/>
                                 <connections>
-                                    <segue destination="jxF-W9-GH3" kind="show" id="oQE-ED-c2E"/>
+                                    <segue destination="jxF-W9-GH3" kind="show" animates="NO" id="oQE-ED-c2E"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w51-4V-wT6">
@@ -1087,7 +1095,7 @@ Circuits.                                   12) One mistake that people make is 
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="m8W-dU-crV" kind="popoverPresentation" popoverAnchorView="w51-4V-wT6" id="a52-AQ-jB3">
+                                    <segue destination="m8W-dU-crV" kind="popoverPresentation" identifier="powerVideo" popoverAnchorView="w51-4V-wT6" id="a52-AQ-jB3">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
                                 </connections>
@@ -1097,6 +1105,7 @@ Circuits.                                   12) One mistake that people make is 
                                 <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <state key="normal" image="info.circle" catalog="system">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="heavy"/>
                                 </state>
                                 <connections>
                                     <segue destination="LNz-q1-r3v" kind="popoverPresentation" popoverAnchorView="Vp4-Js-p81" id="EV0-6e-h9N">
@@ -1311,15 +1320,6 @@ Circuits.                                   12) One mistake that people make is 
                                     <constraint firstItem="YLh-Bd-Y9f" firstAttribute="leading" secondItem="JPp-ee-q7W" secondAttribute="leading" id="yqZ-uV-M1S"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tg5-mV-lM4">
-                                <rect key="frame" x="194" y="25" width="26" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" backgroundImage="arrowshape.turn.up.left.2.fill" catalog="system"/>
-                                <connections>
-                                    <segue destination="m8W-dU-crV" kind="show" id="I2P-yV-8ZR"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
@@ -1509,7 +1509,7 @@ Circuits.                                   12) One mistake that people make is 
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="arrow.left" catalog="system"/>
                                 <connections>
-                                    <segue destination="jxF-W9-GH3" kind="show" id="goM-DB-5JO"/>
+                                    <segue destination="jxF-W9-GH3" kind="show" animates="NO" id="goM-DB-5JO"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meditate" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f29-TC-hf6">
@@ -1518,6 +1518,23 @@ Circuits.                                   12) One mistake that people make is 
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4c-JE-YQZ">
+                                <rect key="frame" x="52" y="556" width="271" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="71" id="MaF-qK-qED"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aEz-XU-Ae1">
+                                <rect key="frame" x="340.5" y="20" width="14.5" height="22"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="music.note" catalog="system"/>
+                                <connections>
+                                    <segue destination="mFp-Im-pO0" kind="presentation" id="ar8-E7-uHz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
@@ -1525,10 +1542,12 @@ Circuits.                                   12) One mistake that people make is 
                             <constraint firstItem="lXI-ji-nYq" firstAttribute="trailing" secondItem="rpT-gg-VG6" secondAttribute="trailing" constant="20" id="262-vR-pCA"/>
                             <constraint firstItem="nSK-LF-ZRC" firstAttribute="leading" secondItem="lXI-ji-nYq" secondAttribute="leading" constant="36" id="5TV-VR-anw"/>
                             <constraint firstItem="lXI-ji-nYq" firstAttribute="trailing" secondItem="f29-TC-hf6" secondAttribute="trailing" constant="52" id="D55-8b-OHc"/>
+                            <constraint firstItem="c4c-JE-YQZ" firstAttribute="leading" secondItem="lXI-ji-nYq" secondAttribute="leading" constant="52" id="FKp-ci-art"/>
                             <constraint firstItem="lXI-ji-nYq" firstAttribute="trailing" secondItem="d1s-aM-YsG" secondAttribute="trailing" constant="16" id="GKR-0V-Vps"/>
                             <constraint firstItem="d1s-aM-YsG" firstAttribute="top" secondItem="2Up-3B-IgC" secondAttribute="bottom" constant="65.5" id="Gf7-cH-kAb"/>
                             <constraint firstItem="f29-TC-hf6" firstAttribute="top" secondItem="lXI-ji-nYq" secondAttribute="top" constant="188" id="JKZ-45-6eH"/>
                             <constraint firstItem="d1s-aM-YsG" firstAttribute="leading" secondItem="lXI-ji-nYq" secondAttribute="leading" constant="24" id="JjH-Mp-e6Q"/>
+                            <constraint firstItem="lXI-ji-nYq" firstAttribute="trailing" secondItem="c4c-JE-YQZ" secondAttribute="trailing" constant="52" id="P5H-Qh-Xe5"/>
                             <constraint firstItem="nSK-LF-ZRC" firstAttribute="top" secondItem="lXI-ji-nYq" secondAttribute="top" constant="20" id="PCf-rh-mZp"/>
                             <constraint firstItem="lXI-ji-nYq" firstAttribute="trailing" secondItem="f29-TC-hf6" secondAttribute="trailing" constant="52" id="Rd7-ZP-caJ"/>
                             <constraint firstItem="f29-TC-hf6" firstAttribute="leading" secondItem="lXI-ji-nYq" secondAttribute="leading" constant="52" id="Rg1-q8-Cbt"/>
@@ -1536,10 +1555,13 @@ Circuits.                                   12) One mistake that people make is 
                             <constraint firstItem="f29-TC-hf6" firstAttribute="leading" secondItem="lXI-ji-nYq" secondAttribute="leading" constant="52" id="UqT-N6-kcW"/>
                             <constraint firstItem="rpT-gg-VG6" firstAttribute="leading" secondItem="lXI-ji-nYq" secondAttribute="leading" constant="20" id="Vo5-n5-OrE"/>
                             <constraint firstItem="2Up-3B-IgC" firstAttribute="top" secondItem="f29-TC-hf6" secondAttribute="bottom" constant="57.5" id="Y6h-QX-2Ay"/>
+                            <constraint firstItem="aEz-XU-Ae1" firstAttribute="top" secondItem="lXI-ji-nYq" secondAttribute="top" constant="20" id="bgG-zH-wbC"/>
                             <constraint firstItem="lXI-ji-nYq" firstAttribute="trailing" secondItem="Hui-vZ-6Zm" secondAttribute="trailing" constant="20" id="fvG-E9-kXu"/>
                             <constraint firstItem="f29-TC-hf6" firstAttribute="top" secondItem="lXI-ji-nYq" secondAttribute="top" constant="188" id="hCg-3Y-8I4"/>
                             <constraint firstItem="lXI-ji-nYq" firstAttribute="trailing" secondItem="2Up-3B-IgC" secondAttribute="trailing" constant="80" id="i0r-cL-2Os"/>
+                            <constraint firstItem="lXI-ji-nYq" firstAttribute="trailing" secondItem="aEz-XU-Ae1" secondAttribute="trailing" constant="20" id="i3V-bU-InC"/>
                             <constraint firstItem="Hui-vZ-6Zm" firstAttribute="top" secondItem="rpT-gg-VG6" secondAttribute="bottom" constant="8" id="ibd-FU-eIh"/>
+                            <constraint firstItem="lXI-ji-nYq" firstAttribute="bottom" secondItem="c4c-JE-YQZ" secondAttribute="bottom" constant="20" id="jhK-d9-trg"/>
                             <constraint firstItem="Hui-vZ-6Zm" firstAttribute="leading" secondItem="lXI-ji-nYq" secondAttribute="leading" constant="20" id="sB9-ck-wmP"/>
                             <constraint firstItem="Hui-vZ-6Zm" firstAttribute="top" secondItem="rpT-gg-VG6" secondAttribute="bottom" constant="8" id="tJq-Em-DL1"/>
                         </constraints>
@@ -1547,6 +1569,7 @@ Circuits.                                   12) One mistake that people make is 
                     </view>
                     <navigationItem key="navigationItem" id="ZOR-VA-MPa"/>
                     <connections>
+                        <outlet property="resultLabel" destination="c4c-JE-YQZ" id="e9Z-ze-B9R"/>
                         <outlet property="slider" destination="d1s-aM-YsG" id="dUU-3F-Djf"/>
                         <outlet property="start" destination="rpT-gg-VG6" id="oUL-ia-N5X"/>
                         <outlet property="stop" destination="Hui-vZ-6Zm" id="4BF-oM-dGg"/>
@@ -1556,6 +1579,56 @@ Circuits.                                   12) One mistake that people make is 
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jev-aA-PmW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5013.6000000000004" y="1220.2398800599701"/>
+        </scene>
+        <!--Music Table View Controller-->
+        <scene sceneID="esW-Vw-MrR">
+            <objects>
+                <tableViewController id="mFp-Im-pO0" customClass="musicTableViewController" customModule="FitnessTracker_FinalProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZMx-Ck-dqL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell1" rowHeight="208" id="eNG-K4-ivz" customClass="musicTableViewCell" customModule="FitnessTracker_FinalProject" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="208"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eNG-K4-ivz" id="OF4-Qh-WNP">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="208"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bv4-lb-OOi">
+                                            <rect key="frame" x="56" y="45" width="263" height="118"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Bv4-lb-OOi" secondAttribute="trailing" constant="40" id="8Y2-8q-wWe"/>
+                                        <constraint firstItem="Bv4-lb-OOi" firstAttribute="top" secondItem="OF4-Qh-WNP" secondAttribute="topMargin" constant="34" id="A2X-CB-j15"/>
+                                        <constraint firstItem="Bv4-lb-OOi" firstAttribute="leading" secondItem="OF4-Qh-WNP" secondAttribute="leadingMargin" constant="40" id="Y0B-Le-Vua"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Bv4-lb-OOi" secondAttribute="bottom" constant="34" id="tFZ-iH-zdE"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="textOfMusic" destination="Bv4-lb-OOi" id="hWa-fa-tDl"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="mFp-Im-pO0" id="oUa-IC-z2X"/>
+                            <outlet property="delegate" destination="mFp-Im-pO0" id="snV-k4-IYt"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="tableView" destination="ZMx-Ck-dqL" id="9mx-yx-HUX"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yxX-fX-aCw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5773.6000000000004" y="1217.5412293853074"/>
         </scene>
         <!--Cardio View Controller-->
         <scene sceneID="qOu-XM-5vg">
@@ -1646,7 +1719,7 @@ Circuits.                                   12) One mistake that people make is 
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="arrow.left" catalog="system"/>
                                 <connections>
-                                    <segue destination="jxF-W9-GH3" kind="show" id="aTt-HT-mlc"/>
+                                    <segue destination="jxF-W9-GH3" kind="show" animates="NO" id="aTt-HT-mlc"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1827,7 +1900,7 @@ Circuits.                                   12) One mistake that people make is 
                                             <outlet property="dataLab" destination="Iot-hg-Av4" id="kcK-o0-AUr"/>
                                             <outlet property="imageViewThumb" destination="mgk-RJ-B8y" id="Txn-kj-hji"/>
                                             <outlet property="titleLab" destination="8R8-dS-qgY" id="KiM-vl-EGU"/>
-                                            <segue destination="wqZ-TB-mpL" kind="show" id="Lcs-OY-AzI"/>
+                                            <segue destination="wqZ-TB-mpL" kind="presentation" identifier="showVideo" id="rj5-8T-llx"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1900,28 +1973,20 @@ Circuits.                                   12) One mistake that people make is 
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fAM-ma-oVs">
                                 <rect key="frame" x="20" y="20" width="335" height="607"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gua-N2-nOD">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="22"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" image="arrowshape.turn.up.left.2.fill" catalog="system"/>
-                                        <connections>
-                                            <segue destination="pov-yH-SZz" kind="show" animates="NO" id="OOL-ZX-IeR"/>
-                                        </connections>
-                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rnR-iQ-PAC">
-                                        <rect key="frame" x="0.0" y="32" width="335" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="20.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJ6-0N-LDd">
-                                        <rect key="frame" x="0.0" y="62.5" width="335" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="30.5" width="335" height="20.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dMC-Zo-P0K">
-                                        <rect key="frame" x="0.0" y="93" width="335" height="188.5"/>
+                                        <rect key="frame" x="0.0" y="61" width="335" height="188.5"/>
                                         <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="dMC-Zo-P0K" secondAttribute="height" multiplier="1280:720" id="Pdr-Bo-N2d"/>
@@ -1932,7 +1997,7 @@ Circuits.                                   12) One mistake that people make is 
                                         </wkWebViewConfiguration>
                                     </wkWebView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="247" verticalCompressionResistancePriority="747" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TRg-gW-odA">
-                                        <rect key="frame" x="0.0" y="291.5" width="335" height="315.5"/>
+                                        <rect key="frame" x="0.0" y="259.5" width="335" height="347.5"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1982,21 +2047,19 @@ Circuits.                                   12) One mistake that people make is 
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="OOL-ZX-IeR"/>
         <segue reference="goM-DB-5JO"/>
-        <segue reference="a52-AQ-jB3"/>
-        <segue reference="Kzp-An-Tj3"/>
+        <segue reference="bHN-3s-sxn"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="4rthpic" width="980" height="979"/>
         <image name="FirstPageBackground" width="500" height="333"/>
-        <image name="arrow.left" catalog="system" width="32" height="32"/>
-        <image name="arrowshape.turn.up.left.2.fill" catalog="system" width="128" height="87"/>
+        <image name="arrow.left" catalog="system" width="128" height="98"/>
         <image name="arrowshape.turn.up.left.fill" catalog="system" width="128" height="106"/>
         <image name="fifithpic" width="980" height="978"/>
         <image name="firstpic" width="980" height="979"/>
         <image name="gymshark" width="1280" height="720"/>
         <image name="info.circle" catalog="system" width="128" height="121"/>
+        <image name="music.note" catalog="system" width="97" height="128"/>
         <image name="nike" width="1920" height="1088"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="thirdpic" width="980" height="975"/>
