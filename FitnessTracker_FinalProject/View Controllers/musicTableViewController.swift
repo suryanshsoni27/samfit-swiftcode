@@ -13,6 +13,7 @@ class musicTableViewController: UITableViewController {
 
    
 
+    
     var music = [Music]()
     var player: AVAudioPlayer?
     
@@ -68,6 +69,7 @@ class musicTableViewController: UITableViewController {
         let pos = indexPath.row
         
         let song = music[pos]
+        print(song)
 
         let urlString = Bundle.main.path(forResource: String(song.music), ofType: "mp3")
 
@@ -86,7 +88,7 @@ class musicTableViewController: UITableViewController {
                 print("player is nil")
                 return
             }
-            player.volume = 0.5
+            player.volume = 0.9
 
             player.play()
         }
@@ -142,8 +144,36 @@ class musicTableViewController: UITableViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
+     
     */
+    
 
+    
+    
+    @IBAction func playPause(_ sender: UIButton) {
+    
+        if player?.isPlaying == true {
+            // pause
+            player?.pause()
+            // show play button
+            
+            
+
+         
+           
+        }
+        else {
+            // play
+            player?.play()
+           
+
+        
+           
+        }
+        
+        
+    }
+    
 }
 
 struct Music {

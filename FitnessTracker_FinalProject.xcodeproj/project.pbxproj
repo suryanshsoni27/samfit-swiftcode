@@ -47,6 +47,9 @@
 		9D7EC4DE24B6D18C001EAF22 /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7EC4DD24B6D18C001EAF22 /* TrainingViewController.swift */; };
 		9D995CFE24BF59AD00B67557 /* shoppingApparelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D995CFD24BF59AD00B67557 /* shoppingApparelViewController.swift */; };
 		9D995D0024BF602800B67557 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D995CFF24BF602800B67557 /* Assets.xcassets */; };
+		9D9AEA7E24CCCC960096EBD1 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9AEA7D24CCCC960096EBD1 /* ImageTableViewCell.swift */; };
+		9D9AEA8224CCCD0B0096EBD1 /* image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9AEA8124CCCD0B0096EBD1 /* image.swift */; };
+		9D9AEA8424CCCE620096EBD1 /* imageClickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9AEA8324CCCE620096EBD1 /* imageClickViewController.swift */; };
 		9DC1885A24BBEE3200B67DCD /* FitkitchenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC1885924BBEE3200B67DCD /* FitkitchenTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +96,9 @@
 		9D7EC4DD24B6D18C001EAF22 /* TrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
 		9D995CFD24BF59AD00B67557 /* shoppingApparelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shoppingApparelViewController.swift; sourceTree = "<group>"; };
 		9D995CFF24BF602800B67557 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9D9AEA7D24CCCC960096EBD1 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		9D9AEA8124CCCD0B0096EBD1 /* image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = image.swift; sourceTree = "<group>"; };
+		9D9AEA8324CCCE620096EBD1 /* imageClickViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageClickViewController.swift; sourceTree = "<group>"; };
 		9DC1885924BBEE3200B67DCD /* FitkitchenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitkitchenTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -194,6 +200,8 @@
 				9D995CFD24BF59AD00B67557 /* shoppingApparelViewController.swift */,
 				9D4A03EF24CA6F7A0020742E /* musicTableViewController.swift */,
 				9D4A03F124CA733C0020742E /* musicView.swift */,
+				9D9AEA8124CCCD0B0096EBD1 /* image.swift */,
+				9D9AEA8324CCCE620096EBD1 /* imageClickViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -201,6 +209,7 @@
 		9DC1885C24BBEE6500B67DCD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9D9AEA7D24CCCC960096EBD1 /* ImageTableViewCell.swift */,
 				9DC1885924BBEE3200B67DCD /* FitkitchenTableViewCell.swift */,
 				9D4B067124BD6384006B43A7 /* powerliftTableViewCell.swift */,
 				9D4A03F324CA771C0020742E /* musicTableViewCell.swift */,
@@ -309,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D3D19E524BBD3D10096566F /* AppDelegate.swift in Sources */,
+				9D9AEA8424CCCE620096EBD1 /* imageClickViewController.swift in Sources */,
 				9D2D3CDD24BBF7F900CC6A29 /* CacheManager.swift in Sources */,
 				9D7EC4DE24B6D18C001EAF22 /* TrainingViewController.swift in Sources */,
 				9D4B067A24BD65EE006B43A7 /* powerliftvideosViewController.swift in Sources */,
@@ -317,6 +327,7 @@
 				9D2D3CDF24BBFB8A00CC6A29 /* FKDetailedViewController.swift in Sources */,
 				9D3D19E224BBB3BF0096566F /* Model.swift in Sources */,
 				9D4B067624BD6413006B43A7 /* Model2.swift in Sources */,
+				9D9AEA8224CCCD0B0096EBD1 /* image.swift in Sources */,
 				9D7836A024BED07B00EFF22A /* storageforlines.swift in Sources */,
 				9D4A03F224CA733C0020742E /* musicView.swift in Sources */,
 				9D4A03F424CA771C0020742E /* musicTableViewCell.swift in Sources */,
@@ -335,6 +346,7 @@
 				9D1C2CD824BE236C008172BF /* meditateViewController.swift in Sources */,
 				9D3D19E024BBB3710096566F /* Video.swift in Sources */,
 				9D4B067424BD63F2006B43A7 /* Constants2.swift in Sources */,
+				9D9AEA7E24CCCC960096EBD1 /* ImageTableViewCell.swift in Sources */,
 				9DC1885A24BBEE3200B67DCD /* FitkitchenTableViewCell.swift in Sources */,
 				9D7EC4D124B6B72D001EAF22 /* FirstPageUserIncomingViewController.swift in Sources */,
 			);
