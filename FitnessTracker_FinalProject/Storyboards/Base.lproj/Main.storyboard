@@ -785,18 +785,19 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQq-d6-rSZ">
-                                <rect key="frame" x="71" y="473" width="90" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="71" y="473" width="90" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UJY-Qk-gUN">
-                                <rect key="frame" x="195" y="534" width="112" height="34"/>
+                                <rect key="frame" x="195" y="534" width="164" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tEM-eD-ifp">
-                                <rect key="frame" x="67" y="529.5" width="98" height="42.5"/>
+                                <rect key="frame" x="67" y="527" width="98" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Click for data"/>
                                 <connections>
@@ -804,12 +805,16 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qjc-ey-PVe">
-                                <rect key="frame" x="195" y="467" width="112" height="34"/>
+                                <rect key="frame" x="195" y="467" width="164" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="res:" destination="MHd-d1-No3" eventType="editingDidEndOnExit" id="1KX-MH-JW8"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="MqS-75-YLz" firstAttribute="top" secondItem="DHN-Jx-8od" secondAttribute="bottom" constant="31" id="41W-OC-07x"/>
                             <constraint firstItem="fL8-eg-iJt" firstAttribute="leading" secondItem="Th9-00-G6b" secondAttribute="leading" constant="67" id="4X7-sA-wjx"/>
@@ -823,7 +828,7 @@
                             <constraint firstItem="Th9-00-G6b" firstAttribute="trailing" secondItem="tEM-eD-ifp" secondAttribute="trailing" constant="210" id="Ki8-qf-jgc"/>
                             <constraint firstItem="fL8-eg-iJt" firstAttribute="top" secondItem="MqS-75-YLz" secondAttribute="bottom" constant="8" id="SQq-aH-oGN"/>
                             <constraint firstItem="NQq-d6-rSZ" firstAttribute="top" secondItem="fL8-eg-iJt" secondAttribute="bottom" constant="53" id="VMk-Tx-YWw"/>
-                            <constraint firstItem="Th9-00-G6b" firstAttribute="trailing" secondItem="UJY-Qk-gUN" secondAttribute="trailing" constant="68" id="YAW-qU-w0Z"/>
+                            <constraint firstItem="Th9-00-G6b" firstAttribute="trailing" secondItem="UJY-Qk-gUN" secondAttribute="trailing" constant="16" id="YAW-qU-w0Z"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NQq-d6-rSZ" secondAttribute="trailing" constant="198" id="YdV-PM-M0A"/>
                             <constraint firstItem="UJY-Qk-gUN" firstAttribute="leading" secondItem="tEM-eD-ifp" secondAttribute="trailing" constant="30" id="ZYa-Go-QaK"/>
                             <constraint firstItem="Th9-00-G6b" firstAttribute="trailing" secondItem="fL8-eg-iJt" secondAttribute="trailing" constant="68" id="ag5-gI-rH3"/>
@@ -839,20 +844,28 @@
                             <constraint firstItem="DHN-Jx-8od" firstAttribute="leading" secondItem="Tm2-cW-bQo" secondAttribute="trailing" constant="212" id="ooK-eD-1nZ"/>
                             <constraint firstItem="Th9-00-G6b" firstAttribute="bottom" secondItem="fL8-eg-iJt" secondAttribute="bottom" constant="227" id="p8i-UA-vf9"/>
                             <constraint firstItem="UJY-Qk-gUN" firstAttribute="top" secondItem="Qjc-ey-PVe" secondAttribute="bottom" constant="33" id="rRl-GC-Pb5"/>
-                            <constraint firstItem="Th9-00-G6b" firstAttribute="trailing" secondItem="Qjc-ey-PVe" secondAttribute="trailing" constant="68" id="t8f-dS-L2t"/>
+                            <constraint firstItem="Th9-00-G6b" firstAttribute="trailing" secondItem="Qjc-ey-PVe" secondAttribute="trailing" constant="16" id="t8f-dS-L2t"/>
                             <constraint firstItem="MqS-75-YLz" firstAttribute="top" secondItem="Tm2-cW-bQo" secondAttribute="bottom" constant="37" id="tWs-mv-pZu"/>
                             <constraint firstItem="tEM-eD-ifp" firstAttribute="leading" secondItem="Th9-00-G6b" secondAttribute="leading" constant="67" id="zS8-jY-wV7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Th9-00-G6b"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="ebx-DV-tU9" appends="YES" id="PvH-ft-Vtf"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="j2b-9B-8ex"/>
                     <connections>
                         <outlet property="datetext" destination="UJY-Qk-gUN" id="caw-JY-szD"/>
                         <outlet property="imageViewer" destination="MqS-75-YLz" id="JYR-qO-DvP"/>
-                        <outlet property="weight" destination="Qjc-ey-PVe" id="Och-mX-cWn"/>
+                        <outlet property="weightText" destination="Qjc-ey-PVe" id="cck-ez-AF9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v7H-fE-SZr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ebx-DV-tU9">
+                    <connections>
+                        <action selector="tapgest:" destination="MHd-d1-No3" id="tTi-pd-CXI"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="5276" y="-1013.3433283358322"/>
         </scene>

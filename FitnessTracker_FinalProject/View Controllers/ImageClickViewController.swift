@@ -13,7 +13,8 @@ class imageClickViewController: UIViewController, UINavigationControllerDelegate
     @IBOutlet weak var imageViewer: UIImageView!
     
     
-    @IBOutlet weak var weight: UITextField!
+    
+    @IBOutlet weak var weightText: UITextField!
     
     @IBOutlet weak var datetext: UITextField!
     
@@ -49,6 +50,23 @@ class imageClickViewController: UIViewController, UINavigationControllerDelegate
         present(imagePicker, animated: true, completion: nil)
     }
     
+    @IBAction func dateChangeButton(_ sender: Any) {
+            
+            let currentDate = Date()
+            let formatter = DateFormatter()
+            formatter.timeStyle = .medium
+            formatter.dateStyle = .long
+            let dateTimeString = formatter.string(from: currentDate)
+            
+            datetext.text = dateTimeString
+            
+            
+        }
+    
+    
+    
+    
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         imagePicker.dismiss(animated: true, completion: nil)
         imageViewer.image = info[.originalImage] as? UIImage
@@ -58,19 +76,19 @@ class imageClickViewController: UIViewController, UINavigationControllerDelegate
     
     
     
-    @IBAction func dateChangeButton(_ sender: Any) {
-        
-        let currentDate = Date()
-        let formatter = DateFormatter()
-//        formatter.timeStyle = .medium
-//        formatter.dataStyle = .long
-        
-        let dateTimeString = formatter.string(from: currentDate)
-        
-        datetext.text = dateTimeString
-        
+    @IBAction func res(_ sender: Any) {
+    }
+    
+    
+    
+    
+    @IBAction func tapgest(_ sender: Any) {
         
     }
+    
+    
+    
+    
     
            
            

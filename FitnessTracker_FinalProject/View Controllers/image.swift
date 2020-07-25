@@ -43,7 +43,8 @@ class image: UITableViewController {
         let addVC = segue.source as! imageClickViewController
                     tableView.reloadData()
         images.append(addVC.imageViewer.image as Any)
-
+        weights.append(addVC.weightText.text!)
+        dates.append(addVC.datetext.text!)
         tableView.reloadData()
         }
         
@@ -62,8 +63,9 @@ class image: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell3", for: indexPath) as! ImageTableViewCell
-        cell.im.image = images[indexPath.row] as! UIImage
-        
+        cell.im.image = images[indexPath.row] as? UIImage
+        cell.date.text = dates[indexPath.row]
+        cell.Weigth.text = weights[indexPath.row]
         return cell
     }
    
