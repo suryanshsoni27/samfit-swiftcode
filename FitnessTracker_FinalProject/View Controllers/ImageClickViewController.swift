@@ -15,17 +15,20 @@ class imageClickViewController: UIViewController, UINavigationControllerDelegate
     
     
     @IBOutlet weak var weightText: UITextField!
-    
-    @IBOutlet weak var datetext: UITextField!
-    
+  
     
     
+    @IBOutlet weak var dateTextToUpdate: UILabel!
+    
+  
     
     
     var imagePicker: UIImagePickerController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       
 
         // Do any additional setup after loading the view.
     }
@@ -58,7 +61,7 @@ class imageClickViewController: UIViewController, UINavigationControllerDelegate
             formatter.dateStyle = .long
             let dateTimeString = formatter.string(from: currentDate)
             
-            datetext.text = dateTimeString
+            dateTextToUpdate.text = dateTimeString
             
             
         }
@@ -75,9 +78,7 @@ class imageClickViewController: UIViewController, UINavigationControllerDelegate
     
     
     
-    
-    @IBAction func res(_ sender: Any) {
-    }
+  
     
     
     

@@ -50,6 +50,7 @@
 		9D9AEA7E24CCCC960096EBD1 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9AEA7D24CCCC960096EBD1 /* ImageTableViewCell.swift */; };
 		9D9AEA8224CCCD0B0096EBD1 /* image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9AEA8124CCCD0B0096EBD1 /* image.swift */; };
 		9D9AEA8424CCCE620096EBD1 /* imageClickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9AEA8324CCCE620096EBD1 /* imageClickViewController.swift */; };
+		9DA5078124CD3054006B6A07 /* imageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA5078024CD3054006B6A07 /* imageDetailViewController.swift */; };
 		9DC1885A24BBEE3200B67DCD /* FitkitchenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC1885924BBEE3200B67DCD /* FitkitchenTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +100,7 @@
 		9D9AEA7D24CCCC960096EBD1 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
 		9D9AEA8124CCCD0B0096EBD1 /* image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = image.swift; sourceTree = "<group>"; };
 		9D9AEA8324CCCE620096EBD1 /* imageClickViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageClickViewController.swift; sourceTree = "<group>"; };
+		9DA5078024CD3054006B6A07 /* imageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageDetailViewController.swift; sourceTree = "<group>"; };
 		9DC1885924BBEE3200B67DCD /* FitkitchenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitkitchenTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -202,6 +204,7 @@
 				9D4A03F124CA733C0020742E /* musicView.swift */,
 				9D9AEA8124CCCD0B0096EBD1 /* image.swift */,
 				9D9AEA8324CCCE620096EBD1 /* imageClickViewController.swift */,
+				9DA5078024CD3054006B6A07 /* imageDetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				9D4A03F424CA771C0020742E /* musicTableViewCell.swift in Sources */,
 				9D4A03F024CA6F7A0020742E /* musicTableViewController.swift in Sources */,
 				9D7EC4D824B6D0A6001EAF22 /* ThreeButtonsForSelectViewController.swift in Sources */,
+				9DA5078124CD3054006B6A07 /* imageDetailViewController.swift in Sources */,
 				9D3D19E724BBD96A0096566F /* Response.swift in Sources */,
 				9D7EC4DA24B6D16C001EAF22 /* CalorrieTrackerViewController.swift in Sources */,
 				9D4B066C24BD211C006B43A7 /* PowerliftViewController.swift in Sources */,

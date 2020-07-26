@@ -13,6 +13,9 @@ class ImageTableViewCell: UITableViewCell {
     @IBOutlet weak var im: UIImageView!
     @IBOutlet weak var Weigth: UILabel!
     @IBOutlet weak var date: UILabel!
+    @IBOutlet weak var bodyFat: UILabel!
+    @IBOutlet weak var calories: UILabel!
+    
     
     
     override func awakeFromNib() {
