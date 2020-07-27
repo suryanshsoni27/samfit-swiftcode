@@ -10,7 +10,7 @@ import UIKit
 
 class PowerliftViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate {
     
-    var type = ["upper","lower"]
+    var type = ["General","upper","lower"]
     
     
     
@@ -24,6 +24,12 @@ class PowerliftViewController: UIViewController,UIPickerViewDataSource,UIPickerV
     @IBOutlet weak var sixtyRM: UILabel!
     @IBOutlet weak var fiftyRm: UILabel!
     @IBOutlet weak var fortyRm: UILabel!
+    
+    
+    @IBOutlet weak var youcan: UILabel!
+    
+    @IBOutlet weak var repLab: UILabel!
+    
     
     @IBOutlet weak var calBut: UIButton!
     
@@ -54,6 +60,9 @@ class PowerliftViewController: UIViewController,UIPickerViewDataSource,UIPickerV
         let selected = type[row]
         
         if selected == "upper" {
+//            repLab.alpha = CGFloat(0.0)
+//            repsText.alpha = CGFloat(0.0)
+//            youcan.alpha = CGFloat(1.0)
             let controller = UIAlertController(title:"Are you sure yo want to use these values?",message: nil,preferredStyle: .actionSheet)
             let yesAction = UIAlertAction(title: "sure", style: .destructive,
                                           handler:{ action in
@@ -75,23 +84,23 @@ class PowerliftViewController: UIViewController,UIPickerViewDataSource,UIPickerV
                                                 
                                             }
                                             
-                                            guard let r = self.repsText.text, r != "" else {
-                                                let controller = UIAlertController (title:"You did enter anything",message: nil, preferredStyle: .alert)
-                                                let cancelAction = UIAlertAction(title:"Enter Again",style: .cancel ,handler: nil)
-                                                controller.addAction(cancelAction)
-                                                self.present(controller,animated: true,completion: nil)
-                                                return
-                                            }
-                                            guard self.repsText.text != nil , let callr = Double(self.repsText.text!), callr >= 0.0 else{
-                                                let controller = UIAlertController (title:"values not provided",message: nil, preferredStyle: .alert)
-                                                let cancelAction = UIAlertAction(title:"Enter Again",style: .cancel ,handler: nil)
-                                                controller.addAction(cancelAction)
-                                                self.present(controller,animated: true,completion: nil)
-                                                return}
+//                                            guard let r = self.repsText.text, r != "" else {
+//                                                let controller = UIAlertController (title:"You did enter anything",message: nil, preferredStyle: .alert)
+//                                                let cancelAction = UIAlertAction(title:"Enter Again",style: .cancel ,handler: nil)
+//                                                controller.addAction(cancelAction)
+//                                                self.present(controller,animated: true,completion: nil)
+//                                                return
+//                                            }
+//                                            guard self.repsText.text != nil , let callr = Double(self.repsText.text!), callr >= 0.0 else{
+//                                                let controller = UIAlertController (title:"values not provided",message: nil, preferredStyle: .alert)
+//                                                let cancelAction = UIAlertAction(title:"Enter Again",style: .cancel ,handler: nil)
+//                                                controller.addAction(cancelAction)
+//                                                self.present(controller,animated: true,completion: nil)
+//                                                return}
                                             
                                             let weight = Double(w)
-                                            let reps = Double(r)
-                                            let hund = weight!*(1 + reps!/30)
+                                           
+                                            let hund = (weight!*(1.1307)) + 0.6998
                                             
                                             self.hundRm.text = "100% " + String(hund.rounded() ) + self.kgtolbControl.titleForSegment(at: choice)!  + " 1 rep"
                                             self.ninetyRm.text = "90% " + String((hund*0.90).rounded()) + self.kgtolbControl.titleForSegment(at: choice)!  + " 2 reps"
@@ -113,6 +122,73 @@ class PowerliftViewController: UIViewController,UIPickerViewDataSource,UIPickerV
             
         }
         else if selected == "lower"{
+//            repLab.alpha = CGFloat(0.0)
+//            repsText.alpha = CGFloat(0.0)
+//            youcan.alpha = CGFloat(1.0)
+             let controller = UIAlertController(title:"Are you sure yo want to use these values?",message: nil,preferredStyle: .actionSheet)
+                       let yesAction = UIAlertAction(title: "sure", style: .destructive,
+                                                     handler:{ action in
+                                                       
+                                                       
+                                                       guard let w = self.weighText.text, w != "" else {
+                                                           let controller = UIAlertController (title:"You did enter anything",message: nil, preferredStyle: .alert)
+                                                           let cancelAction = UIAlertAction(title:"Enter Again",style: .cancel ,handler: nil)
+                                                           controller.addAction(cancelAction)
+                                                           self.present(controller,animated: true,completion: nil)
+                                                           return
+                                                       }
+                                                       guard self.weighText.text != nil , let callw = Double(self.weighText.text!), callw >= 0.0 else{
+                                                           let controller = UIAlertController (title:"check values for spaces or some other characters",message: nil, preferredStyle: .alert)
+                                                           let cancelAction = UIAlertAction(title:"Enter Again",style: .cancel ,handler: nil)
+                                                           controller.addAction(cancelAction)
+                                                           self.present(controller,animated: true,completion: nil)
+                                                           return
+                                                           
+                                                       }
+                                                       
+//                                                       guard let r = self.repsText.text, r != "" else {
+//                                                           let controller = UIAlertController (title:"You did enter anything",message: nil, preferredStyle: .alert)
+//                                                           let cancelAction = UIAlertAction(title:"Enter Again",style: .cancel ,handler: nil)
+//                                                           controller.addAction(cancelAction)
+//                                                           self.present(controller,animated: true,completion: nil)
+//                                                           return
+//                                                       }
+//                                                       guard self.repsText.text != nil , let callr = Double(self.repsText.text!), callr >= 0.0 else{
+//                                                           let controller = UIAlertController (title:"check values for spaces or some other characters",message: nil, preferredStyle: .alert)
+//                                                           let cancelAction = UIAlertAction(title:"Enter Again",style: .cancel ,handler: nil)
+//                                                           controller.addAction(cancelAction)
+//                                                           self.present(controller,animated: true,completion: nil)
+//                                                           return}
+                                                       
+                                                       let weight = Double(w)
+                                                      
+                                                        let hund = (weight!*(1.09703)) + 14.2546
+                                                             self.hundRm.text = "100% " + String(hund.rounded() ) + self.kgtolbControl.titleForSegment(at: choice)!  + " 1 rep"
+                                                                                                       self.ninetyRm.text = "90% " + String((hund*0.90).rounded()) + self.kgtolbControl.titleForSegment(at: choice)!  + " 2 reps"
+                                                                                                       self.eightyRm.text = "80% " +  String((hund*0.80).rounded()) + self.kgtolbControl.titleForSegment(at: choice)! + " 4 reps"
+                                                                                                       self.seventyRm.text = "70% " +  String((hund*0.70).rounded()) + self.kgtolbControl.titleForSegment(at: choice)! + " 6 reps"
+                                                                                                       self.sixtyRM.text = "60% " + String((hund*0.60).rounded()) + self.kgtolbControl.titleForSegment(at: choice)! + " 8 reps"
+                                                                                                       self.fiftyRm.text = "50% " + String((hund*0.50).rounded()) + self.kgtolbControl.titleForSegment(at: choice)! + " 10 reps"
+                                                                                                       self.fortyRm.text = "40% " + String((hund*0.40).rounded()) + self.kgtolbControl.titleForSegment(at: choice)! + " 12 reps"
+                                                                                             
+                                                       
+                                                       
+                       })
+                       
+                       let noAction = UIAlertAction(title: "No", style: .cancel, handler: nil)
+                       controller.addAction(yesAction)
+                       controller.addAction(noAction)
+                       
+                       
+                       present(controller,animated: true,completion: nil)
+            
+        }
+        
+        else if selected == "general" {
+//
+//            repLab.alpha = CGFloat(1.0)
+//            repsText.alpha = CGFloat(1.0)
+//            youcan.alpha = CGFloat(0.0)
              let controller = UIAlertController(title:"Are you sure yo want to use these values?",message: nil,preferredStyle: .actionSheet)
                        let yesAction = UIAlertAction(title: "sure", style: .destructive,
                                                      handler:{ action in
@@ -170,6 +246,10 @@ class PowerliftViewController: UIViewController,UIPickerViewDataSource,UIPickerV
                        
                        present(controller,animated: true,completion: nil)
             
+            
+            
+            
+            
         }
     }
     
@@ -187,6 +267,30 @@ class PowerliftViewController: UIViewController,UIPickerViewDataSource,UIPickerV
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return type[row]}
     
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        let selected = type[row]
+        
+        if selected == "general" {
+            
+            repLab.alpha = CGFloat(1.0)
+            repsText.alpha = CGFloat(1.0)
+            youcan.alpha = CGFloat(0.0)
+        }
+        else if selected == "upper" {
+            repLab.alpha = CGFloat(0.0)
+            repsText.alpha = CGFloat(0.0)
+            youcan.alpha = CGFloat(1.0)
+        }
+        else if selected == "lower" {
+            repLab.alpha = CGFloat(0.0)
+            repsText.alpha = CGFloat(0.0)
+            youcan.alpha = CGFloat(1.0)
+            
+        }
+        reloadInputViews()
+        picker.reloadAllComponents()
+        
+    }
     
     
     @IBAction func weigtres(_ sender: Any) {

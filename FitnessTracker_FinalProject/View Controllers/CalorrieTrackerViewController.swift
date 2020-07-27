@@ -37,16 +37,12 @@ class CalorrieTrackerViewController: UIViewController {
     
     
     @IBOutlet weak var callab: UILabel!
-    func changeTexture() {
-        callab.layer.cornerRadius = 8.0
-        callab.layer.cornerRadius = 1000
-    }
+    
     
     
     
     
     override func viewDidLoad() {
-        changeTexture()
         super.viewDidLoad()
         
         

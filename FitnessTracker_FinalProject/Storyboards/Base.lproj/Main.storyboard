@@ -896,9 +896,10 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fL8-eg-iJt">
                                 <rect key="frame" x="16" y="359" width="343" height="61"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Take progress Picture">
+                                <state key="normal" title="Click To Take Picture">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -927,6 +928,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tEM-eD-ifp">
                                 <rect key="frame" x="67" y="457" width="240" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Click for date">
@@ -947,8 +949,9 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w88-Fe-Uz0">
                                 <rect key="frame" x="0.0" y="586" width="375" height="61"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="Click here Add Weight , Calories , body fat">
+                                <state key="normal" title="Click Here Add Weight, Calories, Body Fat">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -993,6 +996,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="j2b-9B-8ex"/>
                     <connections>
+                        <outlet property="but1" destination="fL8-eg-iJt" id="tkH-s5-lCa"/>
+                        <outlet property="but2" destination="tEM-eD-ifp" id="Vv5-31-9nq"/>
                         <outlet property="dateTextToUpdate" destination="Lpt-CY-0xX" id="7BC-ul-6Xc"/>
                         <outlet property="imageViewer" destination="MqS-75-YLz" id="JYR-qO-DvP"/>
                     </connections>
@@ -1499,6 +1504,12 @@ Circuits.                                   12) One mistake that people make is 
                                     <action selector="calculateButton:" destination="KV0-Dz-bD3" eventType="touchUpInside" id="zvc-wH-wwV"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter weight you can lift for 4-6 repetition" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t3r-SS-Sy6">
+                                <rect key="frame" x="16" y="105" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <gestureRecognizers/>
@@ -1510,6 +1521,7 @@ Circuits.                                   12) One mistake that people make is 
                             <constraint firstItem="bpp-0f-eyZ" firstAttribute="centerX" secondItem="TV5-XN-Ivu" secondAttribute="centerX" constant="-1" id="EuU-uh-0qF"/>
                             <constraint firstItem="AQR-Ci-Ak8" firstAttribute="trailing" secondItem="y8B-jR-foL" secondAttribute="trailingMargin" constant="-12" id="FN3-IQ-JFA"/>
                             <constraint firstItem="VGl-ZY-SWc" firstAttribute="leading" secondItem="2du-YD-hRc" secondAttribute="leading" constant="61" id="FWz-Hb-vLj"/>
+                            <constraint firstItem="2du-YD-hRc" firstAttribute="trailing" secondItem="t3r-SS-Sy6" secondAttribute="trailing" constant="16" id="HId-6i-ySt"/>
                             <constraint firstItem="2du-YD-hRc" firstAttribute="trailing" secondItem="TV5-XN-Ivu" secondAttribute="trailing" constant="99" id="IOC-4s-usA"/>
                             <constraint firstItem="AQR-Ci-Ak8" firstAttribute="leading" secondItem="VGl-ZY-SWc" secondAttribute="trailing" constant="31.5" id="Pm4-cu-b2w"/>
                             <constraint firstItem="VGl-ZY-SWc" firstAttribute="centerY" secondItem="AQR-Ci-Ak8" secondAttribute="centerY" constant="19" id="Qfa-z9-Tmy"/>
@@ -1517,11 +1529,14 @@ Circuits.                                   12) One mistake that people make is 
                             <constraint firstAttribute="trailing" secondItem="Jt2-W3-sxi" secondAttribute="trailing" constant="-1" id="WUZ-sU-wd2"/>
                             <constraint firstItem="bpp-0f-eyZ" firstAttribute="top" secondItem="2du-YD-hRc" secondAttribute="top" constant="47" id="YFv-jy-QRV"/>
                             <constraint firstItem="Jt2-W3-sxi" firstAttribute="leading" secondItem="2du-YD-hRc" secondAttribute="leading" constant="1" id="bdX-1R-9I4"/>
+                            <constraint firstItem="t3r-SS-Sy6" firstAttribute="leading" secondItem="2du-YD-hRc" secondAttribute="leading" constant="16" id="cY7-9b-8HT"/>
+                            <constraint firstItem="t3r-SS-Sy6" firstAttribute="top" secondItem="bpp-0f-eyZ" secondAttribute="bottom" constant="37.5" id="dZp-5G-tgE"/>
                             <constraint firstItem="VGl-ZY-SWc" firstAttribute="top" secondItem="bpp-0f-eyZ" secondAttribute="bottom" constant="81.5" id="fCc-cJ-cEb"/>
                             <constraint firstItem="Vp4-Js-p81" firstAttribute="leading" secondItem="bpp-0f-eyZ" secondAttribute="trailing" constant="49.5" id="g2G-nK-x2S"/>
                             <constraint firstItem="2du-YD-hRc" firstAttribute="bottom" secondItem="Jt2-W3-sxi" secondAttribute="bottom" constant="85" id="hOR-qL-58h"/>
                             <constraint firstItem="SFG-A4-hiw" firstAttribute="leading" secondItem="VGl-ZY-SWc" secondAttribute="trailing" constant="50.5" id="hPB-Bb-rQq"/>
                             <constraint firstItem="w51-4V-wT6" firstAttribute="bottom" secondItem="2du-YD-hRc" secondAttribute="bottom" id="moT-Ac-p6E"/>
+                            <constraint firstItem="AQR-Ci-Ak8" firstAttribute="top" secondItem="t3r-SS-Sy6" secondAttribute="bottom" constant="23" id="nAt-14-EmI"/>
                             <constraint firstItem="Jt2-W3-sxi" firstAttribute="top" secondItem="TV5-XN-Ivu" secondAttribute="bottom" constant="23.5" id="qkq-LJ-PWL"/>
                             <constraint firstItem="AQR-Ci-Ak8" firstAttribute="top" secondItem="2du-YD-hRc" secondAttribute="top" constant="149" id="sTl-ko-AJ8"/>
                             <constraint firstItem="w51-4V-wT6" firstAttribute="leading" secondItem="2du-YD-hRc" secondAttribute="leading" constant="83" id="uNs-nm-PAe"/>
@@ -1546,10 +1561,12 @@ Circuits.                                   12) One mistake that people make is 
                         <outlet property="kgtolbControl" destination="AQR-Ci-Ak8" id="leI-jv-Y6V"/>
                         <outlet property="ninetyRm" destination="7CF-Fg-snG" id="XJk-3h-wba"/>
                         <outlet property="picker" destination="Jt2-W3-sxi" id="28f-0d-nl7"/>
+                        <outlet property="repLab" destination="J0P-h8-c52" id="5I5-NJ-okZ"/>
                         <outlet property="repsText" destination="pea-6Z-IGk" id="7td-t8-7yP"/>
                         <outlet property="seventyRm" destination="UDv-ht-1i8" id="pVP-3a-1VK"/>
                         <outlet property="sixtyRM" destination="j9G-DD-BHm" id="1MD-QP-Bj9"/>
                         <outlet property="weighText" destination="ibf-Nn-2Ex" id="QtH-p3-j9f"/>
+                        <outlet property="youcan" destination="t3r-SS-Sy6" id="EP6-Ly-zhy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gic-Hd-w53" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2441,7 +2458,7 @@ Circuits.                                   12) One mistake that people make is 
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="TXV-L1-86P"/>
+        <segue reference="oQE-ED-c2E"/>
         <segue reference="Kzp-An-Tj3"/>
     </inferredMetricsTieBreakers>
     <resources>

@@ -25,13 +25,17 @@ class imageClickViewController: UIViewController, UINavigationControllerDelegate
     
   
     
+    @IBOutlet weak var but1: UIButton!
+    @IBOutlet weak var but2: UIButton!
+    
     
     var imagePicker: UIImagePickerController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
+       Utilities.buttonStyle(but1)
+        Utilities.buttonStyle(but2)
 
         // Do any additional setup after loading the view.
     }
