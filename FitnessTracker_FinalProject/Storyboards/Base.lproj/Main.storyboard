@@ -2150,6 +2150,18 @@ Circuits.                                   12) One mistake that people make is 
                                     <segue destination="jxF-W9-GH3" kind="show" animates="NO" id="aTt-HT-mlc"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4DK-PK-1Dw">
+                                <rect key="frame" x="58" y="216" width="57" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="minutes" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSv-iw-h6N">
+                                <rect key="frame" x="286" y="216" width="61" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
@@ -2157,13 +2169,19 @@ Circuits.                                   12) One mistake that people make is 
                             <constraint firstItem="yK7-he-yK3" firstAttribute="leading" secondItem="qhB-sj-BLd" secondAttribute="leading" constant="51" id="5yT-iT-PgR"/>
                             <constraint firstItem="1Wf-vZ-mVw" firstAttribute="top" secondItem="qhB-sj-BLd" secondAttribute="top" constant="83" id="90Z-p6-yL8"/>
                             <constraint firstItem="5G1-dL-qJj" firstAttribute="leading" secondItem="qhB-sj-BLd" secondAttribute="leading" constant="20" id="Bjm-uw-qlC"/>
+                            <constraint firstItem="DSv-iw-h6N" firstAttribute="leading" secondItem="4DK-PK-1Dw" secondAttribute="trailing" constant="171" id="Dcj-Gl-Q4H"/>
                             <constraint firstItem="k8f-eO-9Tp" firstAttribute="trailing" secondItem="qhB-sj-BLd" secondAttribute="trailing" id="DuG-AM-m87"/>
                             <constraint firstItem="dyz-vJ-kC6" firstAttribute="top" secondItem="k8f-eO-9Tp" secondAttribute="bottom" constant="28" id="Eal-D2-SsM"/>
                             <constraint firstItem="dyz-vJ-kC6" firstAttribute="leading" secondItem="qhB-sj-BLd" secondAttribute="leading" constant="67" id="H76-SK-RN4"/>
                             <constraint firstItem="k8f-eO-9Tp" firstAttribute="leading" secondItem="qhB-sj-BLd" secondAttribute="leading" id="HIw-M1-PNp"/>
                             <constraint firstItem="bjB-YT-Pin" firstAttribute="leading" secondItem="dyz-vJ-kC6" secondAttribute="trailing" constant="77" id="HcY-tu-zoR"/>
+                            <constraint firstItem="k8f-eO-9Tp" firstAttribute="top" secondItem="DSv-iw-h6N" secondAttribute="bottom" constant="14" id="JSf-gc-GsV"/>
+                            <constraint firstItem="4DK-PK-1Dw" firstAttribute="leading" secondItem="qhB-sj-BLd" secondAttribute="leading" constant="58" id="V8q-pM-fqQ"/>
+                            <constraint firstItem="4DK-PK-1Dw" firstAttribute="top" secondItem="1Wf-vZ-mVw" secondAttribute="bottom" constant="85" id="Vpz-QO-wfZ"/>
                             <constraint firstItem="1Wf-vZ-mVw" firstAttribute="leading" secondItem="qhB-sj-BLd" secondAttribute="leading" constant="100" id="Zia-ql-1v6"/>
+                            <constraint firstItem="DSv-iw-h6N" firstAttribute="top" secondItem="qhB-sj-BLd" secondAttribute="top" constant="216" id="ahs-vI-GzH"/>
                             <constraint firstItem="qhB-sj-BLd" firstAttribute="trailing" secondItem="1Wf-vZ-mVw" secondAttribute="trailing" constant="100" id="bT5-Ve-KXo"/>
+                            <constraint firstItem="qhB-sj-BLd" firstAttribute="trailing" secondItem="DSv-iw-h6N" secondAttribute="trailing" constant="28" id="brz-73-huS"/>
                             <constraint firstItem="qhB-sj-BLd" firstAttribute="bottom" secondItem="k8f-eO-9Tp" secondAttribute="bottom" constant="341" id="cmo-eh-xJP"/>
                             <constraint firstItem="bjB-YT-Pin" firstAttribute="top" secondItem="k8f-eO-9Tp" secondAttribute="bottom" constant="40" id="dds-gS-nts"/>
                             <constraint firstItem="5G1-dL-qJj" firstAttribute="top" secondItem="dyz-vJ-kC6" secondAttribute="bottom" constant="78.5" id="dmj-oY-fhh"/>
@@ -2172,6 +2190,7 @@ Circuits.                                   12) One mistake that people make is 
                             <constraint firstItem="yK7-he-yK3" firstAttribute="top" secondItem="qhB-sj-BLd" secondAttribute="top" constant="24" id="fYI-mb-4hj"/>
                             <constraint firstItem="qhB-sj-BLd" firstAttribute="trailing" secondItem="GUX-cP-mlK" secondAttribute="trailing" constant="81" id="ibQ-Hy-bOv"/>
                             <constraint firstItem="5G1-dL-qJj" firstAttribute="top" secondItem="bjB-YT-Pin" secondAttribute="bottom" constant="92" id="lrV-Hb-25O"/>
+                            <constraint firstItem="k8f-eO-9Tp" firstAttribute="top" secondItem="4DK-PK-1Dw" secondAttribute="bottom" constant="14" id="mPb-9k-T6L"/>
                             <constraint firstItem="GUX-cP-mlK" firstAttribute="top" secondItem="k8f-eO-9Tp" secondAttribute="bottom" constant="253" id="nec-BD-Bmn"/>
                             <constraint firstItem="qhB-sj-BLd" firstAttribute="trailing" secondItem="5G1-dL-qJj" secondAttribute="trailing" constant="20" id="qI5-pK-2Np"/>
                             <constraint firstItem="GUX-cP-mlK" firstAttribute="leading" secondItem="qhB-sj-BLd" secondAttribute="leading" constant="100" id="rRF-oE-2hQ"/>
@@ -2189,7 +2208,7 @@ Circuits.                                   12) One mistake that people make is 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8dh-No-P5z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2847.826086956522" y="1800"/>
+            <point key="canvasLocation" x="2847.1999999999998" y="1799.5502248875564"/>
         </scene>
         <!--Shopping Apparel View Controller-->
         <scene sceneID="Ryo-vS-p78">
