@@ -12,7 +12,7 @@ class imageDetailViewController:
 UIViewController {
     
     
-    @IBOutlet weak var image: UIImageView!
+   
     @IBOutlet weak var weight: UITextField!
     @IBOutlet weak var totalCalories: UITextField!
     @IBOutlet weak var bodyFat: UITextField!

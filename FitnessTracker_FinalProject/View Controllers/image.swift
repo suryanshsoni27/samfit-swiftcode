@@ -8,56 +8,45 @@
 
 import UIKit
 
+var images = [UIImage]()
+ var weights = [String]()
+ var dates = [String]()
+ var bodyFat = [String]()
+ var calories = [String]()
+ 
+
+var all1 = [["1":images,"2":dates]]
+var dicti1:[String:[Any]] = [:]
+
+
 class image: UITableViewController {
-    var images = [Any]()
-    var weights = [String]()
-    var dates = [String]()
-    var bodyFat = [String]()
-    var calories = [String]()
-    
-   
-//    var all = [Any]()
-//    var dicti:[Int:Any] = [:]
-    
+
     
 
     override func viewDidLoad() {
-        
-        
          super.viewDidLoad()
-//                let arrayKey1 = "arrayKey1"
-//                let url1 = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0] as URL
-//                let myURL1 = url1.appendingPathComponent("fileName1")
-//                if let data1 = NSMutableData(contentsOf: myURL1) {
-//                           let unarchiver = NSKeyedUnarchiver(forReadingWith: data1 as Data)
-//                    if let anArray1 = unarchiver.decodeObject(forKey: arrayKey1) {
-//                               unarchiver.finishDecoding()
-//                        all = anArray1 as! [[AnyHashable : Any]]
-//                           }
-//        }
-//
-//        print(all)
-//        if all.capacity != 0 {
-//
-//            let rowdata1 = all[0]
-//            print(rowdata1)
-//
-//
-//            tableView.reloadData()
-//        }
-//
-   
-         
-            
-            
-
-
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+                let arrayKey1 = "arrayKey1"
+                let url1 = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0] as URL
+                let myURL1 = url1.appendingPathComponent("fileName1")
+                if let data1 = NSMutableData(contentsOf: myURL1) {
+                           let unarchiver = NSKeyedUnarchiver(forReadingWith: data1 as Data)
+                    if let anArray1 = unarchiver.decodeObject(forKey: arrayKey1) {
+                               unarchiver.finishDecoding()
+                        all1 = anArray1 as! [[String : [Any]]]
+                           }
+ 
+            if all1.capacity != 0 {
+            let rowdata1 = all1[0]
+            if(images != nil && dates != nil) {
+            images = rowdata1["1"] as! [UIImage]
+            dates = rowdata1["2"] as! [String]
+            weights = rowdata1["3"]! as! [String]
+            calories = rowdata1["4"]! as! [String]
+            bodyFat = rowdata1["5"]! as! [String]
+            }
+          tableView.reloadData()
+            }
+        }
     }
 
     // MARK: - Table view data source
@@ -74,56 +63,35 @@ class image: UITableViewController {
     @IBAction func done(segue:UIStoryboardSegue) {
         let addVC = segue.source as! imageClickViewController
                     tableView.reloadData()
-        images.append(addVC.imageViewer.image as Any)
+        if (addVC.imageViewer.image != nil) {
+        images.append(addVC.imageViewer.image!)
         dates.append(addVC.dateTextToUpdate.text!)
-        tableView.reloadData()
-        
-//        dicti[1] = images
-//        dicti[2] = dates
-//
-
-        
-      
-        
-        
+        weights.append(addVC.datatosend["weights"]!)
+        bodyFat.append(addVC.datatosend["bf"]!)
+        calories.append(addVC.datatosend["calories"]!)
         }
-    
-    
-  
-        
-        @IBAction func doneagain(segue:UIStoryboardSegue) {
-            let detailVC = segue.source as! imageDetailViewController
-            tableView.reloadData()
-            weights.append(detailVC.weight.text!)
-            calories.append(detailVC.totalCalories.text!)
-            bodyFat.append(detailVC.bodyFat.text!)
-            tableView.reloadData()
-            
-//            dicti[3] = weights
-//            dicti[4] = calories
-//            dicti[5] = bodyFat
-//
-//            all.append(dicti)
-//
-//            let url1  = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0] as URL
-//                     let myURL1 = url1.appendingPathComponent("fileName1")
-//
-//                     let arrayKey1 = "arrayKey1"
-//                     let archiver1 = NSKeyedArchiver(requiringSecureCoding: true)
-//                     archiver1.encode(all, forKey: arrayKey1)
-//                     let data1 = archiver1.encodedData
-//                   do {
-//                      try data1.write(to: myURL1)}
-//                   catch {
-//
-//                   }
-                 
+        dicti1["1"] = images
+        dicti1["2"] = dates
+        dicti1["3"] = weights
+        dicti1["4"] = bodyFat
+        dicti1["5"] = calories
+        all1.insert(dicti1, at: 0)
 
-           
-    }
-            
-        
-    
+        let url1  = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0] as URL
+                 let myURL1 = url1.appendingPathComponent("fileName1")
+
+                 let arrayKey1 = "arrayKey1"
+                 let archiver1 = NSKeyedArchiver(requiringSecureCoding: true)
+                 archiver1.encode(all1, forKey: arrayKey1)
+                 let data1 = archiver1.encodedData
+               do {
+                  try data1.write(to: myURL1)}
+               catch {
+
+               }
+
+        tableView.reloadData()
+}
     
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -138,100 +106,55 @@ class image: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell3", for: indexPath) as! ImageTableViewCell
-        cell.im.image = images[indexPath.row] as? UIImage
+        cell.im.image = images[indexPath.row] as UIImage
+        cell.Weigth.text = weights[indexPath.row]
         cell.date.text = dates[indexPath.row]
-        if weights.count != 0 {
-        cell.Weigth.text = weights[indexPath.row] + "kg/lbs"
-        }
-        if bodyFat.count != 0 {
-               cell.bodyFat.text = bodyFat[indexPath.row] + "%"
-               }
-        if calories.count != 0 {
-               cell.calories.text = calories[indexPath.row] + "kcal"
-               }
-        
-        
+        cell.bodyFat.text = bodyFat[indexPath.row] + "%"
+        cell.calories.text = calories[indexPath.row] + "kcal"
         return cell
     }
+
     
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let imc = imageDetailViewController()
-//        if images.count != 0 {
-//            imc.image = images[indexPath.row] as? UIImageView
-//        }
-//        if bodyFat.count != 0 && bodyFat[indexPath.row] != nil {
-//            imc.bodyFat.text! = bodyFat[indexPath.row]
-//        }
-//        
-//        
-//        if weights.count != 0 && weights[indexPath.row] != nil {
-//        imc.weight.text! = weights[indexPath.row]
-//        }
-//        if calories.count != 0 && calories[indexPath.row] != nil {
-//        imc.totalCalories.text! = calories[indexPath.row]
-//        }
-        
+
         
     
    
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
+   
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
+            images.remove(at: indexPath.row)
+            dates.remove(at: indexPath.row)
+            weights.remove(at: indexPath.row)
+            calories.remove(at: indexPath.row)
+            bodyFat.remove(at: indexPath.row)
+            dicti1["1"] = images
+            dicti1["2"] = dates
+            dicti1["3"] = weights
+            dicti1["4"] = bodyFat
+            dicti1["5"] = calories
+            all1.insert(dicti1, at: 0)
             tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+            tableView.reloadData()
+
+                      }
+        let url1  = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0] as URL
+          let myURL1 = url1.appendingPathComponent("fileName1")
+
+          let arrayKey1 = "arrayKey1"
+          let archiver1 = NSKeyedArchiver(requiringSecureCoding: true)
+          archiver1.encode(all1, forKey: arrayKey1)
+          let data1 = archiver1.encodedData
+        do {
+           try data1.write(to: myURL1)}
+        catch {
+
+        }
     }
-    */
+ 
 
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//       if segue.identifier == "detailView" {
-//           let tbc = sender as! UITableViewCell
-//           let indexPath = tableView.indexPath(for: tbc)!
-//
-//
-//           let detailVC = segue.destination as! imageDetailViewController
-//        detailVC.image = images[indexPath.row] as? UIImageView
-//        detailVC.bodyFat.text = bodyFat[indexPath.row]
-//        detailVC.weight.text = weights[indexPath.row]
-//        detailVC.totalCalories.text = calories[indexPath.row]
-//
-//       }
-//       else if segue.identifier == "addImage" {
-//        segue.destination as! imageClickViewController
-//        }
-//
-//    }
    
 
 
@@ -240,3 +163,4 @@ class image: UITableViewController {
 
 
 }
+

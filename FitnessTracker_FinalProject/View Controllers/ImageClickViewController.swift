@@ -9,6 +9,9 @@
 import UIKit
 
 class imageClickViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    
+    var datatosend:[String:String] = [:]
+
 
     @IBOutlet weak var imageViewer: UIImageView!
     
@@ -67,6 +70,31 @@ class imageClickViewController: UIViewController, UINavigationControllerDelegate
         }
     
     
+     @IBAction func cancel(segue:UIStoryboardSegue) {}
+        
+     @IBAction func done(segue:UIStoryboardSegue) {
+        let addVC = segue.source as! imageDetailViewController
+        if (addVC.weight.text! != "") {
+        datatosend["weights"] = addVC.weight.text!
+        }
+        else {
+            datatosend["weights"] = "kg/lbs"
+        }
+        if (addVC.totalCalories.text! != "") {
+        datatosend["calories"] = addVC.totalCalories.text!
+        }
+        else {
+            datatosend["calories"] = "0"
+        }
+        
+        if(addVC.bodyFat.text! != ""){
+        datatosend["bf"] = addVC.bodyFat.text!
+        }
+        else {
+            datatosend["bf"] = "0"
+        }
+    }
+            
     
     
     
@@ -75,28 +103,6 @@ class imageClickViewController: UIViewController, UINavigationControllerDelegate
         imageViewer.image = info[.originalImage] as? UIImage
         
     }
-    
-    
-    
-  
-    
-    
-    
-    
-    @IBAction func tapgest(_ sender: Any) {
-        
-    }
-    
-    
-    
-    
-    
-           
-           
-           
-       
-    
-    
-    
 
+    
 }

@@ -16,7 +16,7 @@ class ImageTableViewCell: UITableViewCell {
     @IBOutlet weak var bodyFat: UILabel!
     @IBOutlet weak var calories: UILabel!
     
-    
+   
     
     override func awakeFromNib() {
         super.awakeFromNib()
