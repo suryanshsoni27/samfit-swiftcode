@@ -10,7 +10,7 @@ import UIKit
 
 class PowerliftViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate {
     
-    var type = ["General","upper","lower"]
+    var type = ["General","Upper","Lower"]
     
     
     
@@ -37,9 +37,13 @@ class PowerliftViewController: UIViewController,UIPickerViewDataSource,UIPickerV
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        repLab.alpha = CGFloat(1.0)
+        repsText.alpha = CGFloat(1.0)
+        youcan.alpha = CGFloat(0.0)
         
         // Do any additional setup after loading the view.
         Utilities.buttonStyle(calBut)
+    
     }
     
     
@@ -59,10 +63,8 @@ class PowerliftViewController: UIViewController,UIPickerViewDataSource,UIPickerV
         let row = picker.selectedRow(inComponent: 0)
         let selected = type[row]
         
-        if selected == "upper" {
-//            repLab.alpha = CGFloat(0.0)
-//            repsText.alpha = CGFloat(0.0)
-//            youcan.alpha = CGFloat(1.0)
+        if selected == "Upper" {
+
             let controller = UIAlertController(title:"Are you sure yo want to use these values?",message: nil,preferredStyle: .actionSheet)
             let yesAction = UIAlertAction(title: "sure", style: .destructive,
                                           handler:{ action in
@@ -84,19 +86,7 @@ class PowerliftViewController: UIViewController,UIPickerViewDataSource,UIPickerV
                                                 
                                             }
                                             
-//                                            guard let r = self.repsText.text, r != "" else {
-//                                                let controller = UIAlertController (title:"You did enter anything",message: nil, preferredStyle: .alert)
-//                                                let cancelAction = UIAlertAction(title:"Enter Again",style: .cancel ,handler: nil)
-//                                                controller.addAction(cancelAction)
-//                                                self.present(controller,animated: true,completion: nil)
-//                                                return
-//                                            }
-//                                            guard self.repsText.text != nil , let callr = Double(self.repsText.text!), callr >= 0.0 else{
-//                                                let controller = UIAlertController (title:"values not provided",message: nil, preferredStyle: .alert)
-//                                                let cancelAction = UIAlertAction(title:"Enter Again",style: .cancel ,handler: nil)
-//                                                controller.addAction(cancelAction)
-//                                                self.present(controller,animated: true,completion: nil)
-//                                                return}
+
                                             
                                             let weight = Double(w)
                                            
@@ -121,10 +111,8 @@ class PowerliftViewController: UIViewController,UIPickerViewDataSource,UIPickerV
             present(controller,animated: true,completion: nil)
             
         }
-        else if selected == "lower"{
-//            repLab.alpha = CGFloat(0.0)
-//            repsText.alpha = CGFloat(0.0)
-//            youcan.alpha = CGFloat(1.0)
+        else if selected == "Lower"{
+
              let controller = UIAlertController(title:"Are you sure yo want to use these values?",message: nil,preferredStyle: .actionSheet)
                        let yesAction = UIAlertAction(title: "sure", style: .destructive,
                                                      handler:{ action in
@@ -146,19 +134,7 @@ class PowerliftViewController: UIViewController,UIPickerViewDataSource,UIPickerV
                                                            
                                                        }
                                                        
-//                                                       guard let r = self.repsText.text, r != "" else {
-//                                                           let controller = UIAlertController (title:"You did enter anything",message: nil, preferredStyle: .alert)
-//                                                           let cancelAction = UIAlertAction(title:"Enter Again",style: .cancel ,handler: nil)
-//                                                           controller.addAction(cancelAction)
-//                                                           self.present(controller,animated: true,completion: nil)
-//                                                           return
-//                                                       }
-//                                                       guard self.repsText.text != nil , let callr = Double(self.repsText.text!), callr >= 0.0 else{
-//                                                           let controller = UIAlertController (title:"check values for spaces or some other characters",message: nil, preferredStyle: .alert)
-//                                                           let cancelAction = UIAlertAction(title:"Enter Again",style: .cancel ,handler: nil)
-//                                                           controller.addAction(cancelAction)
-//                                                           self.present(controller,animated: true,completion: nil)
-//                                                           return}
+
                                                        
                                                        let weight = Double(w)
                                                       
@@ -184,11 +160,8 @@ class PowerliftViewController: UIViewController,UIPickerViewDataSource,UIPickerV
             
         }
         
-        else if selected == "general" {
-//
-//            repLab.alpha = CGFloat(1.0)
-//            repsText.alpha = CGFloat(1.0)
-//            youcan.alpha = CGFloat(0.0)
+        else if selected == "General" {
+
              let controller = UIAlertController(title:"Are you sure yo want to use these values?",message: nil,preferredStyle: .actionSheet)
                        let yesAction = UIAlertAction(title: "sure", style: .destructive,
                                                      handler:{ action in
@@ -270,27 +243,29 @@ class PowerliftViewController: UIViewController,UIPickerViewDataSource,UIPickerV
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let selected = type[row]
         
-        if selected == "general" {
-            
+        if selected == "General" {
+
             repLab.alpha = CGFloat(1.0)
             repsText.alpha = CGFloat(1.0)
             youcan.alpha = CGFloat(0.0)
         }
-        else if selected == "upper" {
+        else if selected == "Upper" {
             repLab.alpha = CGFloat(0.0)
             repsText.alpha = CGFloat(0.0)
             youcan.alpha = CGFloat(1.0)
         }
-        else if selected == "lower" {
+        else if selected == "Lower" {
             repLab.alpha = CGFloat(0.0)
             repsText.alpha = CGFloat(0.0)
             youcan.alpha = CGFloat(1.0)
             
         }
         reloadInputViews()
-        picker.reloadAllComponents()
+        pickerView.reloadAllComponents()
         
     }
+    
+   
     
     
     @IBAction func weigtres(_ sender: Any) {
