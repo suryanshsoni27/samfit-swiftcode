@@ -11,23 +11,12 @@ import UIKit
 class imageClickViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     var datatosend:[String:String] = [:]
-
-
     @IBOutlet weak var imageViewer: UIImageView!
-    
-    
-    
     @IBOutlet weak var weightText: UITextField!
-  
-    
-    
     @IBOutlet weak var dateTextToUpdate: UILabel!
-    
-  
-    
     @IBOutlet weak var but1: UIButton!
     @IBOutlet weak var but2: UIButton!
-    
+    @IBOutlet weak var but3: UIButton!
     
     var imagePicker: UIImagePickerController!
     
@@ -36,8 +25,8 @@ class imageClickViewController: UIViewController, UINavigationControllerDelegate
         
        Utilities.buttonStyle(but1)
         Utilities.buttonStyle(but2)
-
-        // Do any additional setup after loading the view.
+        Utilities.buttonStyle(but3)
+        
     }
     
 
@@ -98,15 +87,26 @@ class imageClickViewController: UIViewController, UINavigationControllerDelegate
             datatosend["bf"] = "0"
         }
     }
-            
+        
+    
+    @IBAction func choseFromAlbum(_ sender: Any) {
+        imagePicker =  UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.allowsEditing = true
+        present(imagePicker,animated: true,completion:nil)
+    }
     
     
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         imagePicker.dismiss(animated: true, completion: nil)
         imageViewer.image = info[.originalImage] as? UIImage
-        
+
     }
+    
+    
+
 
     
 }

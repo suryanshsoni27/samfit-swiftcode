@@ -37,7 +37,7 @@ class image: UITableViewController {
  
             if all1.capacity != 0 {
             let rowdata1 = all1[0]
-            if(images != nil && dates != nil) {
+            if(images.count != nil && dates != nil) {
             images = rowdata1["1"] as! [UIImage]
             dates = rowdata1["2"] as! [String]
             weights = rowdata1["3"]! as! [String]
@@ -66,9 +66,9 @@ class image: UITableViewController {
         if (addVC.imageViewer.image != nil) {
         images.append(addVC.imageViewer.image!)
         dates.append(addVC.dateTextToUpdate.text!)
-        weights.append(addVC.datatosend["weights"]!)
-        bodyFat.append(addVC.datatosend["bf"]!)
-        calories.append(addVC.datatosend["calories"]!)
+        weights.append(addVC.datatosend["weights"] ?? "0")
+        bodyFat.append(addVC.datatosend["bf"] ?? "0")
+        calories.append(addVC.datatosend["calories"] ?? "0")
         }
         dicti1["1"] = images
         dicti1["2"] = dates

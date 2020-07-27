@@ -894,12 +894,11 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MqS-75-YLz">
                                 <rect key="frame" x="67" y="99" width="240" height="252"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fL8-eg-iJt">
-                                <rect key="frame" x="16" y="359" width="343" height="61"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fL8-eg-iJt">
+                                <rect key="frame" x="67" y="359" width="90" height="57"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Click To Take Picture">
+                                <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <state key="normal" image="camera.fill" catalog="system">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -927,7 +926,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tEM-eD-ifp">
-                                <rect key="frame" x="67" y="457" width="240" height="40"/>
+                                <rect key="frame" x="67" y="472" width="240" height="25"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -939,7 +938,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lpt-CY-0xX">
-                                <rect key="frame" x="67" y="497" width="240" height="44"/>
+                                <rect key="frame" x="67" y="512" width="240" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="w0b-Ga-MFI"/>
                                 </constraints>
@@ -948,7 +947,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w88-Fe-Uz0">
-                                <rect key="frame" x="0.0" y="586" width="375" height="61"/>
+                                <rect key="frame" x="0.0" y="601" width="375" height="46"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Click Here Add Weight, Calories, Body Fat">
@@ -958,12 +957,25 @@
                                     <segue destination="saO-zp-Ut6" kind="presentation" identifier="addMoreDetail" id="7RH-cA-ax6"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhO-bM-jrw">
+                                <rect key="frame" x="217" y="359" width="90" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="1F3-Sn-9PV"/>
+                                    <constraint firstAttribute="height" constant="57" id="7XZ-9W-NCa"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="photo" catalog="system"/>
+                                <connections>
+                                    <action selector="choseFromAlbum:" destination="MHd-d1-No3" eventType="touchUpInside" id="K7E-UW-YVp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="Th9-00-G6b" firstAttribute="trailing" secondItem="uhO-bM-jrw" secondAttribute="trailing" constant="68" id="1i8-XD-cXF"/>
                             <constraint firstItem="MqS-75-YLz" firstAttribute="top" secondItem="DHN-Jx-8od" secondAttribute="bottom" constant="31" id="41W-OC-07x"/>
-                            <constraint firstItem="fL8-eg-iJt" firstAttribute="leading" secondItem="Th9-00-G6b" secondAttribute="leading" constant="16" id="4X7-sA-wjx"/>
+                            <constraint firstItem="fL8-eg-iJt" firstAttribute="leading" secondItem="Th9-00-G6b" secondAttribute="leading" constant="67" id="4X7-sA-wjx"/>
                             <constraint firstItem="Th9-00-G6b" firstAttribute="trailing" secondItem="MqS-75-YLz" secondAttribute="trailing" constant="68" id="4fg-d2-jmE"/>
                             <constraint firstItem="MqS-75-YLz" firstAttribute="top" secondItem="Th9-00-G6b" secondAttribute="top" constant="99" id="6QD-RN-ejL"/>
                             <constraint firstItem="w88-Fe-Uz0" firstAttribute="top" secondItem="Lpt-CY-0xX" secondAttribute="bottom" constant="45" id="E4M-kS-W0e"/>
@@ -975,18 +987,21 @@
                             <constraint firstItem="Th9-00-G6b" firstAttribute="trailing" secondItem="Lpt-CY-0xX" secondAttribute="trailing" constant="68" id="QQp-vg-Geo"/>
                             <constraint firstItem="fL8-eg-iJt" firstAttribute="top" secondItem="MqS-75-YLz" secondAttribute="bottom" constant="8" id="SQq-aH-oGN"/>
                             <constraint firstItem="Th9-00-G6b" firstAttribute="trailing" secondItem="w88-Fe-Uz0" secondAttribute="trailing" id="Soc-47-Hfs"/>
-                            <constraint firstItem="Th9-00-G6b" firstAttribute="trailing" secondItem="fL8-eg-iJt" secondAttribute="trailing" constant="16" id="ag5-gI-rH3"/>
+                            <constraint firstItem="uhO-bM-jrw" firstAttribute="top" secondItem="MqS-75-YLz" secondAttribute="bottom" constant="8" id="WF7-9J-9f6"/>
+                            <constraint firstItem="Th9-00-G6b" firstAttribute="trailing" secondItem="fL8-eg-iJt" secondAttribute="trailing" constant="218" id="ag5-gI-rH3"/>
                             <constraint firstItem="Tm2-cW-bQo" firstAttribute="leading" secondItem="Th9-00-G6b" secondAttribute="leading" constant="38" id="blv-kh-pW6"/>
                             <constraint firstItem="Th9-00-G6b" firstAttribute="trailing" secondItem="DHN-Jx-8od" secondAttribute="trailing" constant="35" id="dBF-uI-vdW"/>
                             <constraint firstItem="DHN-Jx-8od" firstAttribute="leading" secondItem="Tm2-cW-bQo" secondAttribute="trailing" constant="212" id="god-or-y8f"/>
                             <constraint firstItem="Th9-00-G6b" firstAttribute="bottom" secondItem="tEM-eD-ifp" secondAttribute="bottom" constant="150" id="h0G-3R-rLL"/>
                             <constraint firstItem="Tm2-cW-bQo" firstAttribute="top" secondItem="Th9-00-G6b" secondAttribute="top" constant="28" id="j2J-a6-LjJ"/>
+                            <constraint firstItem="tEM-eD-ifp" firstAttribute="top" secondItem="uhO-bM-jrw" secondAttribute="bottom" constant="56" id="jR7-RO-QKu"/>
                             <constraint firstItem="w88-Fe-Uz0" firstAttribute="leading" secondItem="Th9-00-G6b" secondAttribute="leading" id="kyz-ND-sn9"/>
                             <constraint firstItem="DHN-Jx-8od" firstAttribute="top" secondItem="Th9-00-G6b" secondAttribute="top" constant="19" id="mBm-hU-x7P"/>
                             <constraint firstItem="MqS-75-YLz" firstAttribute="leading" secondItem="Th9-00-G6b" secondAttribute="leading" constant="67" id="n8b-aB-oks"/>
                             <constraint firstItem="DHN-Jx-8od" firstAttribute="leading" secondItem="Tm2-cW-bQo" secondAttribute="trailing" constant="212" id="ooK-eD-1nZ"/>
-                            <constraint firstItem="Th9-00-G6b" firstAttribute="bottom" secondItem="fL8-eg-iJt" secondAttribute="bottom" constant="227" id="p8i-UA-vf9"/>
+                            <constraint firstItem="Th9-00-G6b" firstAttribute="bottom" secondItem="fL8-eg-iJt" secondAttribute="bottom" constant="231" id="p8i-UA-vf9"/>
                             <constraint firstItem="MqS-75-YLz" firstAttribute="top" secondItem="Tm2-cW-bQo" secondAttribute="bottom" constant="37" id="tWs-mv-pZu"/>
+                            <constraint firstItem="uhO-bM-jrw" firstAttribute="width" secondItem="fL8-eg-iJt" secondAttribute="width" id="yXR-3W-s9U"/>
                             <constraint firstItem="tEM-eD-ifp" firstAttribute="leading" secondItem="Th9-00-G6b" secondAttribute="leading" constant="67" id="zS8-jY-wV7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Th9-00-G6b"/>
@@ -998,6 +1013,7 @@
                     <connections>
                         <outlet property="but1" destination="fL8-eg-iJt" id="tkH-s5-lCa"/>
                         <outlet property="but2" destination="tEM-eD-ifp" id="Vv5-31-9nq"/>
+                        <outlet property="but3" destination="uhO-bM-jrw" id="xOH-Bw-SZG"/>
                         <outlet property="dateTextToUpdate" destination="Lpt-CY-0xX" id="7BC-ul-6Xc"/>
                         <outlet property="imageViewer" destination="MqS-75-YLz" id="JYR-qO-DvP"/>
                     </connections>
@@ -1010,7 +1026,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="5263" y="-709"/>
+            <point key="canvasLocation" x="5261.6000000000004" y="-709.29535232383819"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="adx-GX-W3h">
@@ -2468,12 +2484,14 @@ Circuits.                                   12) One mistake that people make is 
         <image name="arrow.left" catalog="system" width="128" height="98"/>
         <image name="arrowshape.turn.up.left.fill" catalog="system" width="128" height="106"/>
         <image name="camera" catalog="system" width="128" height="96"/>
+        <image name="camera.fill" catalog="system" width="128" height="96"/>
         <image name="fifithpic" width="980" height="978"/>
         <image name="firstpic" width="980" height="979"/>
         <image name="gymshark" width="1280" height="720"/>
         <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="music.note" catalog="system" width="97" height="128"/>
         <image name="nike" width="1920" height="1088"/>
+        <image name="photo" catalog="system" width="128" height="93"/>
         <image name="playpause.fill" catalog="system" width="128" height="73"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="thirdpic" width="980" height="975"/>
