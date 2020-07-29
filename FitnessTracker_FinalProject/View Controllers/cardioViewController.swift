@@ -13,12 +13,12 @@ class cardioViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
     private let workouttype = 0
     private let time = 1
     private let MET = [
-        "Running":11.5,"Brisk Walking":4.5,"Bicycling":8,"Circuit training":8,"tennis":8,"Soccer":10,"Weight training(Heavy weights)":5,"Weight training(light weights)":5,"Yoga":2
+        "Running":11.5,"Swimming":6,"Brisk Walking":4.5,"Bicycling":8,"Circuit training":8,"tennis":8,"Soccer":10,"Weight training(Heavy weights)":5,"Weight training(light weights)":5,"Yoga":2
 
     ]
     
     private let workouttypes = [
-           "Running","Brisk Walking","Bicycling","Circuit training","tennis","Soccer","Weight training(Heavy weights)","Weight training(light weights)","Yoga"
+           "Running","Brisk Walking","Swimming","Bicycling","Circuit training","tennis","Soccer","Weight training(Heavy weights)","Weight training(light weights)","Yoga"
            
        ]
     
